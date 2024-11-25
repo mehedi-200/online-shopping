@@ -1,0 +1,5794 @@
+/* 
+    Fd Global Css Documentation and Properties
+    Note: @media screen Properties Are Used For device wise Css Properties Applay
+
+ */
+
+
+/*============== Input box ================*/
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #ddd;
+    padding-right: 35px;
+    /* SVG background image */
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%238C98F2'><polygon points='0,0 100,0 50,50'/></svg>") no-repeat;
+    background-size: 12px;
+    background-position: right 8px top calc(50% + 4px);
+    background-repeat: no-repeat;
+}
+
+
+.after-none:after{
+    content: none !important;
+}
+.after-none:before{
+    content: none !important;
+}
+
+
+.cursor{
+    cursor: pointer;
+}
+
+
+
+
+
+ /*=============== Font Size Properties for resize font ===================*/
+.text-5{
+    font-size: 5px;
+}
+.text-6{
+    font-size: 6px;
+}
+.text-7{
+    font-size: 7px;
+}
+.text-8{
+    font-size: 8px;
+}
+.text-9{
+    font-size: 9px;
+}
+.text-10{
+     font-size: 10px;
+}
+.text-11{
+    font-size: 11px;
+}
+.text-12{
+    font-size: 12px;
+}
+.text-13{
+    font-size: 13px;
+}
+.text-14{
+    font-size: 14px;
+}
+.text-15{
+    font-size: 15px;
+}
+.text-16{
+    font-size: 16px;
+}
+.text-17{
+    font-size: 17px;
+}
+.text-18{
+    font-size: 18px;
+}
+.text-19{
+    font-size: 19px;
+}
+.text-20{
+    font-size: 20px;
+}
+.text-21{
+    font-size: 21px;
+}
+.text-22{
+    font-size: 22px;
+}
+.text-23{
+  font-size: 23px;
+}
+.text-24{
+    font-size: 24px;
+}
+.text-25{
+    font-size: 25px;
+}
+.text-26{
+    font-size: 26px;
+}
+.text-27{
+    font-size: 27px;
+}
+.text-28{
+    font-size: 28px;
+}
+.text-30{
+  font-size: 30px;
+}
+.text-31{
+    font-size: 31px;
+}
+.text-32{
+    font-size: 32px;
+}
+.text-33{
+    font-size: 33px;
+}
+.text-34{
+    font-size: 34px;
+}
+.text-35{
+    font-size: 35px;
+}
+.text-36{
+    font-size: 36px;
+}
+.text-37{
+    font-size: 37px;
+}
+.text-38{
+    font-size: 38px;
+}
+.text-39{
+    font-size: 39px;
+}
+.text-40{
+    font-size: 40px;
+}
+.text-41{
+    font-size: 41px;
+}
+.text-42{
+    font-size: 42px;
+}
+.text-43{
+    font-size: 43px;
+}
+.text-44{
+    font-size: 44px;
+}
+.text-45{
+    font-size: 45px;
+}
+.text-46{
+    font-size: 46px;
+}
+.text-47{
+    font-size: 47px;
+}
+.text-48{
+    font-size: 48px;
+}
+.text-49{
+    font-size: 49px;
+}
+.text-50{
+    font-size: 50px;
+}
+.text-51{
+    font-size: 51px;
+}
+.text-52{
+    font-size: 52px;
+}
+.text-53{
+    font-size: 53px;
+}
+.text-54{
+    font-size: 54px;
+}
+.text-55{
+    font-size: 55px;
+}
+.text-56{
+    font-size: 56px;
+}
+.text-57{
+    font-size: 57px;
+}
+.text-58{
+    font-size: 58px;
+}   
+.text-59{
+    font-size: 59px;
+}
+.text-60{
+    font-size: 60px;
+}
+.text-61{
+    font-size: 61px;
+}
+.text-62{
+    font-size: 62px;
+}
+.text-63{
+    font-size: 63px;
+}
+.text-64{
+    font-size: 64px;
+}
+.text-65{
+    font-size: 65px;
+}
+.text-66{
+    font-size: 66px;
+}
+.text-67{
+    font-size: 67px;
+}
+.text-68{
+    font-size: 68px;
+}
+.text-69{
+    font-size: 69px;
+}
+.text-70{
+    font-size: 70px;
+}
+.text-71{
+    font-size: 71px;
+}
+.text-72{
+    font-size: 72px;
+}
+.text-73{
+    font-size: 73px;
+}
+.text-74{
+    font-size: 74px;
+}
+.text-75{
+    font-size: 75px;
+}   
+.text-76{
+    font-size: 76px;
+}
+.text-77{
+    font-size: 77px;
+}
+.text-78{
+    font-size: 78px;
+}
+.text-79{
+    font-size: 79px;
+}
+.text-80{
+    font-size: 80px;
+}
+.text-81{
+    font-size: 81px;
+}
+.text-82{
+    font-size: 82px;
+}
+.text-83{
+    font-size: 83px;
+}
+.text-84{
+    font-size: 84px;
+}
+.text-85{
+    font-size: 85px;
+}
+.text-86{
+    font-size: 86px;
+}
+.text-87{
+    font-size: 87px;
+}
+.text-88{
+    font-size: 88px;
+}
+.text-89{
+    font-size: 89px;
+}
+.text-90{
+    font-size: 90px;
+}
+.text-91{
+    font-size: 91px;
+}
+.text-92{
+    font-size: 92px;
+}
+.text-93{
+    font-size: 93px;
+}
+.text-94{
+    font-size: 94px;
+}
+.text-95{
+    font-size: 95px;
+}
+.text-96{
+    font-size: 96px;
+}
+.text-97{
+    font-size: 97px;
+}
+.text-98{
+    font-size: 98px;
+}
+
+.text-99{
+    font-size: 99px;
+}
+.text-100{
+    font-size: 100px;
+}
+
+
+/*========== Font size Properties for Maximum Size Of a device   =================== */
+
+@media screen and (max-width: 1199px) {
+    .text-xl-down-5{
+        font-size: 5px;
+    }
+    .text-xl-down-6{
+        font-size: 6px;
+    }
+    .text-xl-down-7{
+        font-size: 7px;
+    }
+    .text-xl-down-8{
+        font-size: 8px;
+    }
+    .text-xl-down-9{
+        font-size: 9px;
+    }
+    .text-xl-down-10{
+        font-size: 10px;
+    }
+    .text-lg-down-11{
+        font-size: 11px;
+    }
+    .text-xl-down-12{
+        font-size: 12px;
+    }
+    .text-xl-down-13{
+        font-size: 13px;
+    }
+    .text-xl-down-14{
+        font-size: 14px;
+    }
+    .text-xl-down-text-15{
+        font-size: 15px;
+    }
+    .text-xl-down-16{
+        font-size: 16px;
+    }
+    .text-xl-down-17{
+        font-size: 17px;
+    }
+    .text-xl-down-18{
+        font-size: 18px;
+    }
+    .text-xl-down-19{
+        font-size: 19px;
+    }
+    .text-xl-down-20{
+        font-size: 20px;
+    }
+    .text-xl-down-21{
+        font-size: 21px;
+    }
+    .text-xl-down-22{
+        font-size: 22px;
+    }
+    .text-xl-down-23{
+        font-size: 23px;
+    }
+    .text-xl-down-24{
+        font-size: 24px;
+    }
+    .text-xl-down-25{
+        font-size: 25px;
+    }
+    .text-xl-down-26{
+        font-size: 26px;
+    }
+    .text-xl-down-27{
+        font-size: 27px;
+    }
+    .text-xl-down-28{
+        font-size: 28px;
+    }
+    .text-xl-down-30{
+        font-size: 30px;
+    }
+    .text-xl-down-31{
+        font-size: 31px;
+    }
+    .text-xl-down-32{
+        font-size: 32px;
+    }
+    .text-xl-down-33{
+        font-size: 33px;
+    }
+    .text-xl-down-34{
+        font-size: 34px;
+    }
+    .text-xl-down-35{
+        font-size: 35px;
+    }
+    .text-xl-down-36{
+        font-size: 36px;
+    }
+    .text-xl-down-37{
+        font-size: 37px;
+    }
+    .text-xl-down-38{
+        font-size: 38px;
+    }
+    .text-xl-down-39{
+        font-size: 39px;
+    }
+    .text-xl-down-40{
+        font-size: 40px;
+    }
+    .text-xl-down-41{
+        font-size: 41px;
+    }
+    .text-xl-down-42{
+        font-size: 42px;
+    }
+    .text-xl-down-43{
+        font-size: 43px;
+    }
+    .text-xl-down-44{
+        font-size: 44px;
+    }
+    .text-xl-down-45{
+        font-size: 45px;
+    }
+    .text-xl-down-46{
+        font-size: 46px;
+    }
+    .text-xl-down-47{
+        font-size: 47px;
+    }
+    .text-xl-down-48{
+        font-size: 48px;
+    }
+    .text-xl-down-49{
+        font-size: 49px;
+    }
+    .text-xl-down-50{
+        font-size: 50px;
+    }
+    .text-xl-down-51{
+        font-size: 51px;
+    }
+    .text-xl-down-52{
+        font-size: 52px;
+    }
+    .text-xl-down-53{
+        font-size: 53px;
+    }
+    .text-xl-down-54{
+        font-size: 54px;
+    }
+    .text-xl-down-55{
+        font-size: 55px;
+    }
+    .text-xl-down-56{
+        font-size: 56px;
+    }
+    .text-xl-down-57{
+        font-size: 57px;
+    }
+    .text-xl-down-58{
+        font-size: 58px;
+    }
+    .text-xl-down-59{
+        font-size: 59px;
+    }
+    .text-xl-down-60{
+        font-size: 60px;
+    }
+    .text-xl-down-61{
+        font-size: 61px;
+    }
+    .text-xl-down-62{
+        font-size: 62px;
+    }
+    .text-xl-down-63{
+        font-size: 63px;
+    }
+    .text-xl-down-64{
+        font-size: 64px;
+    }
+    .text-xl-down-65{
+        font-size: 65px;
+    }
+    .text-xl-down-66{
+        font-size: 66px;
+    }
+    .text-xl-down-67{
+        font-size: 67px;
+    }
+    .text-xl-down-68{
+        font-size: 68px;
+    }
+    .text-xl-down-69{
+        font-size: 69px;
+    }
+    .text-xl-down-70{
+        font-size: 70px;
+    }
+    .text-xl-down-71{
+        font-size: 71px;
+    }
+    .text-xl-down-72{
+        font-size: 72px;
+    }
+    .text-xl-down-73{
+        font-size: 73px;
+    }
+    .text-xl-down-74{
+        font-size: 74px;
+    }
+    .text-xl-down-75{
+        font-size: 75px;
+    }
+    .text-xl-down-76{
+        font-size: 76px;
+    }
+    .text-xl-down-77{
+        font-size: 77px;
+    }
+    .text-xl-down-78{
+        font-size: 78px;
+    }
+    .text-xl-down-79{
+        font-size: 79px;
+    }
+    .text-xl-down-80{
+        font-size: 80px;
+    }
+    .text-xl-down-81{
+        font-size: 81px;
+    }
+    .text-xl-down-82{
+        font-size: 82px;
+    }
+    .text-xl-down-83{
+        font-size: 83px;
+    }
+    .text-xl-down-84{
+        font-size: 84px;
+    }
+    .text-xl-down-85{
+        font-size: 85px;
+    }
+    .text-xl-down-86{
+        font-size: 86px;
+    }
+    .text-xl-down-87{
+      font-size: 87px;
+    }
+    .text-xl-down-88{
+        font-size: 88px;
+    }
+    .text-xl-down-89{
+        font-size: 89px;
+    }
+    .text-xl-down-90{
+        font-size: 90px;
+    }
+    .text-xl-down-91{
+        font-size: 91px;
+    }
+    .text-xl-down-92{
+        font-size: 92px;
+    }
+    .text-xl-down-93{
+        font-size: 93px;
+    }
+    .text-xl-down-94{
+        font-size: 94px;
+    }
+    .text-xl-down-95{
+        font-size: 95px;
+    }
+    .text-xl-down-96{
+        font-size: 96px;
+    }
+    .text-xl-down-97{
+        font-size: 97px;
+    }
+    .text-xl-down-98{
+        font-size: 98px;
+    }
+    .text-xl-down-99{
+        font-size: 99px;
+    }
+    .text-xl-down-100{
+        font-size: 100px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .text-lg-down-5{
+        font-size: 5px;
+    }
+    .text-lg-down-6{
+        font-size: 6px;
+    }
+    .text-lg-down-7{
+        font-size: 7px;
+    }
+    .text-lg-down-8{
+        font-size: 8px;
+    }
+    .text-lg-down-9{
+        font-size: 9px;
+    }
+    .text-lg-down-10{
+        font-size: 10px;
+    }
+    .text-lg-down-11{
+        font-size: 11px;
+    }
+    .text-lg-down-12{
+        font-size: 12px;
+    }
+    .text-lg-down-13{
+        font-size: 13px;
+    }
+    .text-lg-down-14{
+        font-size: 14px;
+    }
+    .text-lg-down-15{
+        font-size: 15px;
+    }
+    .text-lg-down-16{
+        font-size: 16px;
+    }
+    .text-lg-down-17{
+        font-size: 17px;
+    }
+    .text-lg-down-18{
+        font-size: 18px;
+    }
+    .text-lg-down-19{
+        font-size: 19px;
+    }
+    .text-lg-down-20{
+        font-size: 20px;
+    }
+    .text-lg-down-21{
+        font-size: 21px;
+    }
+    .text-lg-down-22{
+        font-size: 22px;
+    }
+    .text-lg-down-23{
+        font-size: 23px;
+    }
+    .text-lg-down-24{
+        font-size: 24px;
+    }
+    .text-lg-down-25{
+        font-size: 25px;
+    }
+    .text-lg-down-26{
+        font-size: 26px;
+    }
+    .text-lg-down-27{
+        font-size: 27px;
+    }
+    .text-lg-down-28{
+        font-size: 28px;
+    }
+    .text-lg-down-30{
+        font-size: 30px;
+    }
+    .text-lg-down-31{
+        font-size: 31px;
+    }
+    .text-lg-down-32{
+        font-size: 32px;
+    }
+    .text-lg-down-33{
+        font-size: 33px;
+    }
+    .text-lg-down-34{
+        font-size: 34px;
+    }
+    .text-lg-down-35{
+        font-size: 35px;
+    }
+    .text-lg-down-36{
+        font-size: 36px;
+    }
+    .text-lg-down-37{
+        font-size: 37px;
+    }
+    .text-lg-down-38{
+        font-size: 38px;
+    }
+    .text-lg-down-39{
+        font-size: 39px;
+    }
+    .text-lg-down-40{
+        font-size: 40px;
+    }
+    .text-lg-down-41{
+        font-size: 41px;
+    }
+    .text-lg-down-42{
+        font-size: 42px;
+    }
+    .text-lg-down-43{
+        font-size: 43px;
+    }
+    .text-lg-down-44{
+        font-size: 44px;
+    }
+    .text-lg-down-45{
+        font-size: 45px;
+    }
+    .text-lg-down-46{
+        font-size: 46px;
+    }
+    .text-lg-down-47{
+        font-size: 47px;
+    }
+    .text-lg-down-48{
+        font-size: 48px;
+    }
+    .text-lg-down-49{
+        font-size: 49px;
+    }
+    .text-lg-down-50{
+        font-size: 50px;
+    }
+    .text-lg-down-51{
+        font-size: 51px;
+    }
+    .text-lg-down-52{
+        font-size: 52px;
+    }
+    .text-lg-down-53{
+        font-size: 53px;
+    }
+    .text-lg-down-54{
+        font-size: 54px;
+    }
+    .text-lg-down-55{
+        font-size: 55px;
+    }
+    .text-lg-down-56{
+        font-size: 56px;
+    }
+    .text-lg-down-57{
+        font-size: 57px;
+    }
+    .text-lg-down-58{
+        font-size: 58px;
+    }
+    .text-lg-down-59{
+        font-size: 59px;
+    }
+    .text-lg-down-60{
+        font-size: 60px;
+    }
+    .text-lg-down-61{
+        font-size: 61px;
+    }
+    .text-lg-down-62{
+        font-size: 62px;
+    }
+    .text-lg-down-63{
+        font-size: 63px;
+    }
+    .text-lg-down-64{
+        font-size: 64px;
+    }
+    .text-lg-down-65{
+        font-size: 65px;
+    }
+    .text-lg-down-66{
+        font-size: 66px;
+    }
+    .text-lg-down-67{
+        font-size: 67px;
+    }
+    .text-lg-down-68{
+        font-size: 68px;
+    }
+    .text-lg-down-69{
+        font-size: 69px;
+    }
+    .text-lg-down-70{
+        font-size: 70px;
+    }
+    .text-lg-down-71{
+        font-size: 71px;
+    }
+    .text-lg-down-72{
+        font-size: 72px;
+    }
+    .text-lg-down-73{
+        font-size: 73px;
+    }
+    .text-lg-down-74{
+        font-size: 74px;
+    }
+    .text-lg-down-75{
+        font-size: 75px;
+    }
+    .text-lg-down-76{
+        font-size: 76px;
+    }
+    .text-lg-down-77{
+        font-size: 77px;
+    }
+    .text-lg-down-78{
+        font-size: 78px;
+    }
+    .text-lg-down-79{
+        font-size: 79px;
+    }
+    .text-lg-down-80{
+        font-size: 80px;
+    }
+    .text-lg-down-81{
+        font-size: 81px;
+    }
+    .text-lg-down-82{
+        font-size: 82px;
+    }
+    .text-lg-down-83{
+        font-size: 83px;
+    }
+    .text-lg-down-84{
+        font-size: 84px;
+    }
+    .text-lg-down-85{
+        font-size: 85px;
+    }
+    .text-lg-down-86{
+        font-size: 86px;
+    }
+    .text-lg-down-87{
+        font-size: 87px;
+    }
+    .text-lg-down-88{
+        font-size: 88px;
+    }
+    .text-lg-down-89{
+        font-size: 89px;
+    }
+    .text-lg-down-90{
+        font-size: 90px;
+    }
+    .text-lg-down-91{
+        font-size: 91px;
+    }
+    .text-lg-down-92{
+        font-size: 92px;
+    }
+    .text-lg-down-93{
+        font-size: 93px;
+    }
+    .text-lg-down-94{
+        font-size: 94px;
+    }
+    .text-lg-down-95{
+        font-size: 95px;
+    }
+    .text-lg-down-96{
+        font-size: 96px;
+    }
+    .text-lg-down-97{
+        font-size: 97px;
+    }
+    .text-lg-down-98{
+        font-size: 98px;
+    }
+    .text-lg-down-99{
+        font-size: 99px;
+    }
+    .text-lg-down-100{
+        font-size: 100px;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .text-md-down-5{
+        font-size: 5px;
+    }
+    .text-md-down-6{
+        font-size: 6px;
+    }
+    .text-md-down-7{
+        font-size: 7px;
+    }
+    .text-md-down-8{
+        font-size: 8px;
+    }
+    .text-md-down-9{
+        font-size: 9px;
+    }
+    .text-md-down-10{
+        font-size: 10px;
+    }
+    .text-md-down-11{
+        font-size: 11px;
+    }
+    .text-md-down-12{
+        font-size: 12px;
+    }
+    .text-md-down-13{
+        font-size: 13px;
+    }
+    .text-md-down-14{
+        font-size: 14px;
+    }
+    .text-md-down-15{
+        font-size: 15px;
+    }
+    .text-md-down-16{
+        font-size: 16px;
+    }
+    .text-md-down-17{
+        font-size: 17px;
+    }
+    .text-md-down-18{
+        font-size: 18px;
+    }
+    .text-md-down-19{
+        font-size: 19px;
+    }
+    .text-md-down-20{
+        font-size: 20px;
+    }
+    .text-md-down-21{
+        font-size: 21px;
+    }
+    .text-md-down-22{
+        font-size: 22px;
+    }
+    .text-md-down-23{
+        font-size: 23px;
+    }
+    .text-md-down-24{
+        font-size: 24px;
+    }
+    .text-md-down-25{
+        font-size: 25px;
+    }
+    .text-md-down-26{
+        font-size: 26px;
+    }
+    .text-md-down-27{
+        font-size: 27px;
+    }
+    .text-md-down-28{
+        font-size: 28px;
+    }
+    .text-md-down-30{
+        font-size: 30px;
+    }
+    .text-md-down-31{
+        font-size: 31px;
+    }
+    .text-md-down-32{
+        font-size: 32px;
+    }
+    .text-md-down-33{
+        font-size: 33px;
+    }
+    .text-md-down-34{
+        font-size: 34px;
+    }
+    .text-md-down-35{
+        font-size: 35px;
+    }
+    .text-md-down-36{
+        font-size: 36px;
+    }
+    .text-md-down-37{
+        font-size: 37px;
+    }
+    .text-md-down-38{
+        font-size: 38px;
+    }
+    .text-md-down-39{
+        font-size: 39px;
+    }
+    .text-md-down-40{
+        font-size: 40px;
+    }
+    .text-md-down-41{
+        font-size: 41px;
+    }
+    .text-md-down-42{
+        font-size: 42px;
+    }
+    .text-md-down-43{
+        font-size: 43px;
+    }
+    .text-md-down-44{
+        font-size: 44px;
+    }
+    .text-md-down-45{
+        font-size: 45px;
+    }
+    .text-md-down-46{
+        font-size: 46px;
+    }
+    .text-md-down-47{
+        font-size: 47px;
+    }
+    .text-md-down-48{
+        font-size: 48px;
+    }
+    .text-md-down-49{
+        font-size: 49px;
+    }
+    .text-md-down-50{
+        font-size: 50px;
+    }
+    .text-md-down-51{
+        font-size: 51px;
+    }
+    .text-md-down-52{
+        font-size: 52px;
+    }
+    .text-md-down-53{
+        font-size: 53px;
+    }
+    .text-md-down-54{
+        font-size: 54px;
+    }
+    .text-md-down-55{
+        font-size: 55px;
+    }
+    .text-md-down-56{
+        font-size: 56px;
+    }
+    .text-md-down-57{
+        font-size: 57px;
+    }
+    .text-md-down-58{
+        font-size: 58px;
+    }
+    .text-md-down-59{
+        font-size: 59px;
+    }
+    .text-md-down-60{
+        font-size: 60px;
+    }
+    .text-md-down-61{
+        font-size: 61px;
+    }
+    .text-md-down-62{
+        font-size: 62px;
+    }
+    .text-md-down-63{
+        font-size: 63px;
+    }
+    .text-md-down-64{
+        font-size: 64px;
+    }
+    .text-md-down-65{
+        font-size: 65px;
+    }
+    .text-md-down-66{
+        font-size: 66px;
+    }
+    .text-md-down-67{
+        font-size: 67px;
+    }
+    .text-md-down-68{
+        font-size: 68px;
+    }
+    .text-md-down-69{
+        font-size: 69px;
+    }
+    .text-md-down-70{
+        font-size: 70px;
+    }
+    .text-md-down-71{
+        font-size: 71px;
+    }
+    .text-md-down-72{
+        font-size: 72px;
+    }
+    .text-md-down-73{
+        font-size: 73px;
+    }
+    .text-md-down-74{
+        font-size: 74px;
+    }
+    .text-md-down-75{
+        font-size: 75px;
+    }
+    .text-md-down-76{
+        font-size: 76px;
+    }
+    .text-md-down-77{
+        font-size: 77px;
+    }
+    .text-md-down-78{
+        font-size: 78px;
+    }
+    .text-md-down-79{
+        font-size: 79px;
+    }
+    .text-md-down-80{
+        font-size: 80px;
+    }
+    .text-md-down-81{
+        font-size: 81px;
+    }
+    .text-md-down-82{
+        font-size: 82px;
+    }
+    .text-md-down-83{
+        font-size: 83px;
+    }
+    .text-md-down-84{
+        font-size: 84px;
+    }
+    .text-md-down-85{
+        font-size: 85px;
+    }
+    .text-md-down-86{
+        font-size: 86px;
+    }
+    .text-md-down-87{
+        font-size: 87px;
+    }
+    .text-md-down-88{
+        font-size: 88px;
+    }
+    .text-md-down-89{
+        font-size: 89px;
+    }
+    .text-md-down-90{
+        font-size: 90px;
+    }
+    .text-md-down-91{
+        font-size: 91px;
+    }
+    .text-md-down-92{
+        font-size: 92px;
+    }
+    .text-md-down-93{
+        font-size: 93px;
+    }
+    .text-md-down-94{
+        font-size: 94px;
+    }
+    .text-md-down-95{
+        font-size: 95px;
+    }
+    .text-md-down-96{
+        font-size: 96px;
+    }
+    .text-md-down-97{
+        font-size: 97px;
+    }
+    .text-md-down-98{
+        font-size: 98px;
+    }
+    .text-md-down-99{
+        font-size: 99px;
+    }
+    .text-md-down-100{
+        font-size: 100px;
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+    .text-sm-down-10{
+        font-size: 10px;
+    }
+
+    .text-sm-down-11{
+        font-size: 11px;
+    }
+    .text-sm-down-12{
+        font-size: 12px;
+    }
+    .text-sm-down-13{
+        font-size: 13px;
+    }
+    .text-sm-down-14{
+        font-size: 14px;
+    }
+    .text-sm-down-15{
+        font-size: 15px;
+    }
+    .text-sm-down-16{
+        font-size: 16px;
+    }
+    .text-sm-down-17{
+        font-size: 17px;
+    }
+    .text-sm-down-18{
+        font-size: 18px;
+    }
+    .text-sm-down-19{
+        font-size: 19px;
+    }
+    .text-sm-down-20{
+        font-size: 20px;
+    }
+    .text-sm-down-21{
+        font-size: 21px;
+    }
+    .text-sm-down-22{
+        font-size: 22px;
+    }
+    .text-sm-down-23{
+        font-size: 23px;
+    }
+    .text-sm-down-24{
+        font-size: 24px;
+    }
+    .text-sm-down-25{
+        font-size: 25px;
+    }
+    .text-sm-down-26{
+        font-size: 26px;
+    }
+    .text-sm-down-27{
+        font-size: 27px;
+    }
+    .text-sm-down-28{
+        font-size: 28px;
+    }
+    .text-sm-down-30{
+        font-size: 30px;
+    }
+    .text-sm-down-31{
+        font-size: 31px;
+    }
+    .text-sm-down-32{
+        font-size: 32px;
+    }
+    .text-sm-down-33{
+        font-size: 33px;
+    }
+    .text-sm-down-34{
+        font-size: 34px;
+    }
+    .text-sm-down-35{
+        font-size: 35px;
+    }
+    .text-sm-down-36{
+        font-size: 36px;
+    }
+    .text-sm-down-37{
+        font-size: 37px;
+    }
+    .text-sm-down-38{
+        font-size: 38px;
+    }
+    .text-sm-down-39{
+        font-size: 39px;
+    }
+    .text-sm-down-40{
+        font-size: 40px;
+    }
+    .text-sm-down-41{
+        font-size: 41px;
+    }
+    .text-sm-down-42{
+        font-size: 42px;
+    }
+    .text-sm-down-43{
+        font-size: 43px;
+    }
+    .text-sm-down-44{
+        font-size: 44px;
+    }
+    .text-sm-down-45{
+        font-size: 45px;
+    }
+    .text-sm-down-46{
+        font-size: 46px;
+    }
+    .text-sm-down-47{
+        font-size: 47px;
+    }
+    .text-sm-down-48{
+        font-size: 48px;
+    }
+    .text-sm-down-49{
+        font-size: 49px;
+    }
+    .text-sm-down-50{
+        font-size: 50px;
+    }
+    .text-sm-down-51{
+        font-size: 51px;
+    }
+    .text-sm-down-52{
+        font-size: 52px;
+    }
+    .text-sm-down-53{
+        font-size: 53px;
+    }
+    .text-sm-down-54{
+        font-size: 54px;
+    }
+    .text-sm-down-55{
+        font-size: 55px;
+    }
+    .text-sm-down-56{
+        font-size: 56px;
+    }
+    .text-sm-down-57{
+        font-size: 57px;
+    }
+    .text-sm-down-58{
+        font-size: 58px;
+    }
+    .text-sm-down-59{
+        font-size: 59px;
+    }
+    .text-sm-down-60{
+        font-size: 60px;
+    }
+    .text-sm-down-61{
+        font-size: 61px;
+    }
+    .text-sm-down-62{
+        font-size: 62px;
+    }
+    .text-sm-down-63{
+        font-size: 63px;
+    }
+    .text-sm-down-64{
+        font-size: 64px;
+    }
+    .text-sm-down-65{
+        font-size: 65px;
+    }
+    .text-sm-down-66{
+        font-size: 66px;
+    }
+    .text-sm-down-67{
+        font-size: 67px;
+    }
+    .text-sm-down-68{
+        font-size: 68px;
+    }
+    .text-sm-down-69{
+        font-size: 69px;
+    }
+    .text-sm-down-70{
+        font-size: 70px;
+    }
+    .text-sm-down-71{
+        font-size: 71px;
+    }
+    .text-sm-down-72{
+        font-size: 72px;
+    }
+    .text-sm-down-73{
+        font-size: 73px;
+    }
+    .text-sm-down-74{
+        font-size: 74px;
+    }
+    .text-sm-down-75{
+        font-size: 75px;
+    }
+    .text-sm-down-76{
+        font-size: 76px;
+    }
+    .text-sm-down-77{
+        font-size: 77px;
+    }
+    .text-sm-down-78{
+        font-size: 78px;
+    }
+    .text-sm-down-79{
+        font-size: 79px;
+    }
+    .text-sm-down-80{
+        font-size: 80px;
+    }
+    .text-sm-down-81{
+        font-size: 81px;
+    }
+    .text-sm-down-82{
+        font-size: 82px;
+    }
+    .text-sm-down-83{
+        font-size: 83px;
+    }
+    .text-sm-down-84{
+        font-size: 84px;
+    }
+    .text-sm-down-85{
+        font-size: 85px;
+    }
+    .text-sm-down-86{
+        font-size: 86px;
+    }
+    .text-sm-down-87{
+        font-size: 87px;
+    }
+    .text-sm-down-88{
+        font-size: 88px;
+    }
+    .text-sm-down-89{
+        font-size: 89px;
+    }
+    .text-sm-down-90{
+        font-size: 90px;
+    }
+    .text-sm-down-91{
+        font-size: 91px;
+    }
+    .text-sm-down-92{
+        font-size: 92px;
+    }
+    .text-sm-down-93{
+        font-size: 93px;
+    }
+    .text-sm-down-94{
+        font-size: 94px;
+    }
+    .text-sm-down-95{
+        font-size: 95px;
+    }
+    .text-sm-down-96{
+        font-size: 96px;
+    }
+    .text-sm-down-97{
+        font-size: 97px;
+    }
+    .text-sm-down-98{
+        font-size: 98px;
+    }
+    .text-sm-down-99{
+        font-size: 99px;
+    }
+    .text-sm-down-100{
+        font-size: 100px;
+    }
+}
+
+
+/*========== Set Font size Properties for Minimum Size Dimention Of a device   =================== */
+
+@media screen and (min-width: 1200px) {
+    .text-xl-5{
+        font-size: 5px;
+    }
+    .text-xl-6{
+        font-size: 6px;
+    }
+    .text-xl-7{
+        font-size: 7px;
+    }
+    .text-xl-8{
+        font-size: 8px;
+    }
+    .text-xl-9{
+        font-size: 9px;
+    }
+    .text-xl-10{
+        font-size: 10px;
+    }
+    .text-lg-11{
+        font-size: 11px;
+    }
+    .text-xl-12{
+        font-size: 12px;
+    }
+    .text-xl-13{
+        font-size: 13px;
+    }
+    .text-xl-14{
+        font-size: 14px;
+    }
+    .text-xl-15{
+        font-size: 15px;
+    }
+    .text-xl-16{
+        font-size: 16px;
+    }
+    .text-xl-17{
+        font-size: 17px;
+    }
+    .text-xl-18{
+        font-size: 18px;
+    }
+    .text-xl-19{
+        font-size: 19px;
+    }
+    .text-xl-20{
+        font-size: 20px;
+    }
+    .text-xl-21{
+        font-size: 21px;
+    }
+    .text-xl-22{
+        font-size: 22px;
+    }
+    .text-xl-23{
+        font-size: 23px;
+    }
+    .text-xl-24{
+        font-size: 24px;
+    }
+    .text-xl-25{
+        font-size: 25px;
+    }
+    .text-xl-26{
+        font-size: 26px;
+    }
+    .text-xl-27{
+        font-size: 27px;
+    }
+    .text-xl-28{
+        font-size: 28px;
+    }
+    .text-xl-30{
+        font-size: 30px;
+    }
+    .text-xl-31{
+        font-size: 31px;
+    }
+    .text-xl-32{
+        font-size: 32px;
+    }
+    .text-xl-33{
+        font-size: 33px;
+    }
+    .text-xl-34{
+        font-size: 34px;
+    }
+    .text-xl-35{
+        font-size: 35px;
+    }
+    .text-xl-36{
+        font-size: 36px;
+    }
+    .text-xl-37{
+        font-size: 37px;
+    }
+    .text-xl-38{
+        font-size: 38px;
+    }
+    .text-xl-39{
+        font-size: 39px;
+    }
+    .text-xl-40{
+        font-size: 40px;
+    }
+    .text-xl-41{
+        font-size: 41px;
+    }
+    .text-xl-42{
+        font-size: 42px;
+    }
+    .text-xl-43{
+        font-size: 43px;
+    }
+    .text-xl-44{
+        font-size: 44px;
+    }
+    .text-xl-45{
+        font-size: 45px;
+    }
+    .text-xl-46{
+        font-size: 46px;
+    }
+    .text-xl-47{
+        font-size: 47px;
+    }
+    .text-xl-48{
+        font-size: 48px;
+    }
+    .text-xl-49{
+        font-size: 49px;
+    }
+    .text-xl-50{
+        font-size: 50px;
+    }
+    .text-xl-51{
+        font-size: 51px;
+    }
+    .text-xl-52{
+        font-size: 52px;
+    }
+    .text-xl-53{
+        font-size: 53px;
+    }
+    .text-xl-54{
+        font-size: 54px;
+    }
+    .text-xl-55{
+        font-size: 55px;
+    }
+    .text-xl-56{
+        font-size: 56px;
+    }
+    .text-xl-57{
+        font-size: 57px;
+    }
+    .text-xl-58{
+        font-size: 58px;
+    }
+    .text-xl-59{
+        font-size: 59px;
+    }
+    .text-xl-60{
+        font-size: 60px;
+    }
+    .text-xl-61{
+        font-size: 61px;
+    }
+    .text-xl-62{
+        font-size: 62px;
+    }
+    .text-xl-63{
+        font-size: 63px;
+    }
+    .text-xl-64{
+        font-size: 64px;
+    }
+    .text-xl-65{
+        font-size: 65px;
+    }
+    .text-xl-66{
+        font-size: 66px;
+    }
+    .text-xl-67{
+        font-size: 67px;
+    }
+    .text-xl-68{
+        font-size: 68px;
+    }
+    .text-xl-69{
+        font-size: 69px;
+    }
+    .text-xl-70{
+        font-size: 70px;
+    }
+    .text-xl-71{
+        font-size: 71px;
+    }
+    .text-xl-72{
+        font-size: 72px;
+    }
+    .text-xl-73{
+        font-size: 73px;
+    }
+    .text-xl-74{
+        font-size: 74px;
+    }
+    .text-xl-75{
+        font-size: 75px;
+    }
+    .text-xl-76{
+        font-size: 76px;
+    }
+    .text-xl-77{
+        font-size: 77px;
+    }
+    .text-xl-78{
+        font-size: 78px;
+    }
+    .text-xl-79{
+        font-size: 79px;
+    }
+    .text-xl-80{
+        font-size: 80px;
+    }
+    .text-xl-81{
+        font-size: 81px;
+    }
+    .text-xl-82{
+        font-size: 82px;
+    }
+    .text-xl-83{
+        font-size: 83px;
+    }
+    .text-xl-84{
+        font-size: 84px;
+    }
+    .text-xl-85{
+        font-size: 85px;
+    }
+    .text-xl-86{
+        font-size: 86px;
+    }
+    .text-xl-87{
+        font-size: 87px;
+    }
+    .text-xl-88{
+        font-size: 88px;
+    }
+    .text-xl-89{
+        font-size: 89px;
+    }
+    .text-xl-90{
+        font-size: 90px;
+    }
+    .text-xl-91{
+        font-size: 91px;
+    }
+    .text-xl-92{
+        font-size: 92px;
+    }
+    .text-xl-93{
+        font-size: 93px;
+    }
+    .text-xl-94{
+        font-size: 94px;
+    }
+    .text-xl-95{
+        font-size: 95px;
+    }
+    .text-xl-96{
+        font-size: 96px;
+    }
+    .text-xl-97{
+        font-size: 97px;
+    }
+    .text-xl-98{
+        font-size: 98px;
+    }
+    .text-xl-99{
+        font-size: 99px;
+    }
+    .text-xl-100{
+        font-size: 100px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .text-lg-5{
+        font-size: 5px;
+    }
+    .text-lg-6{
+        font-size: 6px;
+    }
+    .text-lg-7{
+        font-size: 7px;
+    }
+    .text-lg-8{
+        font-size: 8px;
+    }
+    .text-lg-9{
+        font-size: 9px;
+    }
+    .text-lg-10{
+        font-size: 10px;
+    }
+    .text-lg-11{
+        font-size: 11px;
+    }
+    .text-lg-12{
+        font-size: 12px;
+    }
+    .text-lg-13{
+        font-size: 13px;
+    }
+    .text-lg-14{
+        font-size: 14px;
+    }
+    .text-lg-15{
+        font-size: 15px;
+    }
+    .text-lg-16{
+        font-size: 16px;
+    }
+    .text-lg-17{
+        font-size: 17px;
+    }
+    .text-lg-18{
+        font-size: 18px;
+    }
+    .text-lg-19{
+        font-size: 19px;
+    }
+    .text-lg-20{
+        font-size: 20px;
+    }
+    .text-lg-21{
+        font-size: 21px;
+    }
+    .text-lg-22{
+        font-size: 22px;
+    }
+    .text-lg-23{
+        font-size: 23px;
+    }
+    .text-lg-24{
+        font-size: 24px;
+    }
+    .text-lg-25{
+        font-size: 25px;
+    }
+    .text-lg-26{
+        font-size: 26px;
+    }
+    .text-lg-27{
+        font-size: 27px;
+    }
+    .text-lg-28{
+        font-size: 28px;
+    }
+    .text-lg-30{
+        font-size: 30px;
+    }
+    .text-lg-31{
+        font-size: 31px;
+    }
+    .text-lg-32{
+        font-size: 32px;
+    }
+    .text-lg-33{
+        font-size: 33px;
+    }
+    .text-lg-34{
+        font-size: 34px;
+    }
+    .text-lg-35{
+        font-size: 35px;
+    }
+    .text-lg-36{
+        font-size: 36px;
+    }
+    .text-lg-37{
+        font-size: 37px;
+    }
+    .text-lg-38{
+        font-size: 38px;
+    }
+    .text-lg-39{
+        font-size: 39px;
+    }
+    .text-lg-40{
+        font-size: 40px;
+    }
+    .text-lg-41{
+        font-size: 41px;
+    }
+    .text-lg-42{
+        font-size: 42px;
+    }
+    .text-lg-43{
+        font-size: 43px;
+    }
+    .text-lg-44{
+        font-size: 44px;
+    }
+    .text-lg-45{
+        font-size: 45px;
+    }
+    .text-lg-46{
+        font-size: 46px;
+    }
+    .text-lg-47{
+        font-size: 47px;
+    }
+    .text-lg-48{
+        font-size: 48px;
+    }
+    .text-lg-49{
+        font-size: 49px;
+    }
+    .text-lg-50{
+        font-size: 50px;
+    }
+    .text-lg-51{
+        font-size: 51px;
+    }
+    .text-lg-52{
+        font-size: 52px;
+    }
+    .text-lg-53{
+        font-size: 53px;
+    }
+    .text-lg-54{
+        font-size: 54px;
+    }
+    .text-lg-55{
+        font-size: 55px;
+    }
+    .text-lg-56{
+        font-size: 56px;
+    }
+    .text-lg-57{
+        font-size: 57px;
+    }
+    .text-lg-58{
+        font-size: 58px;
+    }
+    .text-lg-59{
+        font-size: 59px;
+    }
+    .text-lg-60{
+        font-size: 60px;
+    }
+    .text-lg-61{
+        font-size: 61px;
+    }
+    .text-lg-62{
+        font-size: 62px;
+    }
+    .text-lg-63{
+        font-size: 63px;
+    }
+    .text-lg-64{
+        font-size: 64px;
+    }
+    .text-lg-65{
+        font-size: 65px;
+    }
+    .text-lg-66{
+        font-size: 66px;
+    }
+    .text-lg-67{
+        font-size: 67px;
+    }
+    .text-lg-68{
+        font-size: 68px;
+    }
+    .text-lg-69{
+        font-size: 69px;
+    }
+    .text-lg-70{
+        font-size: 70px;
+    }
+    .text-lg-71{
+        font-size: 71px;
+    }
+    .text-lg-72{
+        font-size: 72px;
+    }
+    .text-lg-73{
+        font-size: 73px;
+    }
+    .text-lg-74{
+        font-size: 74px;
+    }
+    .text-lg-75{
+        font-size: 75px;
+    }
+    .text-lg-76{
+        font-size: 76px;
+    }
+    .text-lg-77{
+        font-size: 77px;
+    }
+    .text-lg-78{
+        font-size: 78px;
+    }
+    .text-lg-79{
+        font-size: 79px;
+    }
+    .text-lg-80{
+        font-size: 80px;
+    }
+    .text-lg-81{
+        font-size: 81px;
+    }
+    .text-lg-82{
+        font-size: 82px;
+    }
+    .text-lg-83{
+        font-size: 83px;
+    }
+    .text-lg-84{
+        font-size: 84px;
+    }
+    .text-lg-85{
+        font-size: 85px;
+    }
+    .text-lg-86{
+        font-size: 86px;
+    }
+    .text-lg-87{
+        font-size: 87px;
+    }
+    .text-lg-88{
+        font-size: 88px;
+    }
+    .text-lg-89{
+        font-size: 89px;
+    }
+    .text-lg-90{
+        font-size: 90px;
+    }
+    .text-lg-91{
+        font-size: 91px;
+    }
+    .text-lg-92{
+        font-size: 92px;
+    }
+    .text-lg-93{
+        font-size: 93px;
+    }
+    .text-lg-94{
+        font-size: 94px;
+    }
+    .text-lg-95{
+        font-size: 95px;
+    }
+    .text-lg-96{
+        font-size: 96px;
+    }
+    .text-lg-97{
+        font-size: 97px;
+    }
+    .text-lg-98{
+        font-size: 98px;
+    }
+    .text-lg-99{
+        font-size: 99px;
+    }
+    .text-lg-100{
+        font-size: 100px;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .text-md-5{
+        font-size: 5px;
+    }
+    .text-md-6{
+        font-size: 6px;
+    }
+    .text-md-7{
+        font-size: 7px;
+    }
+    .text-md-8{
+        font-size: 8px;
+    }
+    .text-md-9{
+        font-size: 9px;
+    }
+    .text-md-10{
+        font-size: 10px;
+    }
+    .text-md-11{
+        font-size: 11px;
+    }
+    .text-md-12{
+        font-size: 12px;
+    }
+    .text-md-13{
+        font-size: 13px;
+    }
+    .text-md-14{
+        font-size: 14px;
+    }
+    .text-md-15{
+        font-size: 15px;
+    }
+    .text-md-16{
+        font-size: 16px;
+    }
+    .text-md-17{
+        font-size: 17px;
+    }
+    .text-md-18{
+        font-size: 18px;
+    }
+    .text-md-19{
+        font-size: 19px;
+    }
+    .text-md-20{
+        font-size: 20px;
+    }
+    .text-md-21{
+        font-size: 21px;
+    }
+    .text-md-22{
+        font-size: 22px;
+    }
+    .text-md-23{
+        font-size: 23px;
+    }
+    .text-md-24{
+        font-size: 24px;
+    }
+    .text-md-25{
+        font-size: 25px;
+    }
+    .text-md-26{
+        font-size: 26px;
+    }
+    .text-md-27{
+        font-size: 27px;
+    }
+    .text-md-28{
+        font-size: 28px;
+    }
+    .text-md-30{
+        font-size: 30px;
+    }
+    .text-md-31{
+        font-size: 31px;
+    }
+    .text-md-32{
+        font-size: 32px;
+    }
+    .text-md-33{
+        font-size: 33px;
+    }
+    .text-md-34{
+        font-size: 34px;
+    }
+    .text-md-35{
+        font-size: 35px;
+    }
+    .text-md-36{
+        font-size: 36px;
+    }
+    .text-md-37{
+        font-size: 37px;
+    }
+    .text-md-38{
+        font-size: 38px;
+    }
+    .text-md-39{
+        font-size: 39px;
+    }
+    .text-md-40{
+        font-size: 40px;
+    }
+    .text-md-41{
+        font-size: 41px;
+    }
+    .text-md-42{
+        font-size: 42px;
+    }
+    .text-md-43{
+        font-size: 43px;
+    }
+    .text-md-44{
+        font-size: 44px;
+    }
+    .text-md-45{
+        font-size: 45px;
+    }
+    .text-md-46{
+        font-size: 46px;
+    }
+    .text-md-47{
+        font-size: 47px;
+    }
+    .text-md-48{
+        font-size: 48px;
+    }
+    .text-md-49{
+        font-size: 49px;
+    }
+    .text-md-50{
+        font-size: 50px;
+    }
+    .text-md-51{
+        font-size: 51px;
+    }
+    .text-md-52{
+        font-size: 52px;
+    }
+    .text-md-53{
+        font-size: 53px;
+    }
+    .text-md-54{
+        font-size: 54px;
+    }
+    .text-md-55{
+        font-size: 55px;
+    }
+    .text-md-56{
+        font-size: 56px;
+    }
+    .text-md-57{
+        font-size: 57px;
+    }
+    .text-md-58{
+        font-size: 58px;
+    }
+    .text-md-59{
+        font-size: 59px;
+    }
+    .text-md-60{
+        font-size: 60px;
+    }
+    .text-md-61{
+        font-size: 61px;
+    }
+    .text-md-62{
+        font-size: 62px;
+    }
+    .text-md-63{
+        font-size: 63px;
+    }
+    .text-md-64{
+        font-size: 64px;
+    }
+    .text-md-65{
+        font-size: 65px;
+    }
+    .text-md-66{
+        font-size: 66px;
+    }
+    .text-md-67{
+        font-size: 67px;
+    }
+    .text-md-68{
+        font-size: 68px;
+    }
+    .text-md-69{
+        font-size: 69px;
+    }
+    .text-md-70{
+        font-size: 70px;
+    }
+    .text-md-71{
+        font-size: 71px;
+    }
+    .text-md-72{
+        font-size: 72px;
+    }
+    .text-md-73{
+        font-size: 73px;
+    }
+    .text-md-74{
+        font-size: 74px;
+    }
+    .text-md-75{
+        font-size: 75px;
+    }
+    .text-md-76{
+        font-size: 76px;
+    }
+    .text-md-77{
+        font-size: 77px;
+    }
+    .text-md-78{
+        font-size: 78px;
+    }
+    .text-md-79{
+        font-size: 79px;
+    }
+    .text-md-80{
+        font-size: 80px;
+    }
+    .text-md-81{
+        font-size: 81px;
+    }
+    .text-md-82{
+        font-size: 82px;
+    }
+    .text-md-83{
+        font-size: 83px;
+    }
+    .text-md-84{
+        font-size: 84px;
+    }
+    .text-md-85{
+        font-size: 85px;
+    }
+    .text-md-86{
+        font-size: 86px;
+    }
+    .text-md-87{
+        font-size: 87px;
+    }
+    .text-md-88{
+        font-size: 88px;
+    }
+    .text-md-89{
+        font-size: 89px;
+    }
+    .text-md-90{
+        font-size: 90px;
+    }
+    .text-md-91{
+        font-size: 91px;
+    }
+    .text-md-92{
+        font-size: 92px;
+    }
+    .text-md-93{
+        font-size: 93px;
+    }
+    .text-md-94{
+        font-size: 94px;
+    }
+    .text-md-95{
+        font-size: 95px;
+    }
+    .text-md-96{
+        font-size: 96px;
+    }
+    .text-md-97{
+        font-size: 97px;
+    }
+    .text-md-98{
+        font-size: 98px;
+    }
+    .text-md-99{
+        font-size: 99px;
+    }
+    .text-md-100{
+        font-size: 100px;
+    }
+}
+
+
+@media screen and (min-width: 576px) {
+    .text-sm-10{
+        font-size: 10px;
+    }
+
+    .text-sm-11{
+        font-size: 11px;
+    }
+    .text-sm-12{
+        font-size: 12px;
+    }
+    .text-sm-13{
+        font-size: 13px;
+    }
+    .text-sm-14{
+        font-size: 14px;
+    }
+    .text-sm-15{
+        font-size: 15px;
+    }
+    .text-sm-16{
+        font-size: 16px;
+    }
+    .text-sm-17{
+        font-size: 17px;
+    }
+    .text-sm-18{
+        font-size: 18px;
+    }
+    .text-sm-19{
+        font-size: 19px;
+    }
+    .text-sm-20{
+        font-size: 20px;
+    }
+    .text-sm-21{
+        font-size: 21px;
+    }
+    .text-sm-22{
+        font-size: 22px;
+    }
+    .text-sm-23{
+        font-size: 23px;
+    }
+    .text-sm-24{
+        font-size: 24px;
+    }
+    .text-sm-25{
+        font-size: 25px;
+    }
+    .text-sm-26{
+        font-size: 26px;
+    }
+    .text-sm-27{
+        font-size: 27px;
+    }
+    .text-sm-28{
+        font-size: 28px;
+    }
+    .text-sm-30{
+        font-size: 30px;
+    }
+    .text-sm-31{
+        font-size: 31px;
+    }
+    .text-sm-32{
+        font-size: 32px;
+    }
+    .text-sm-33{
+        font-size: 33px;
+    }
+    .text-sm-34{
+        font-size: 34px;
+    }
+    .text-sm-35{
+        font-size: 35px;
+    }
+    .text-sm-36{
+        font-size: 36px;
+    }
+    .text-sm-37{
+        font-size: 37px;
+    }
+    .text-sm-38{
+        font-size: 38px;
+    }
+    .text-sm-39{
+        font-size: 39px;
+    }
+    .text-sm-40{
+        font-size: 40px;
+    }
+    .text-sm-41{
+        font-size: 41px;
+    }
+    .text-sm-42{
+        font-size: 42px;
+    }
+    .text-sm-43{
+        font-size: 43px;
+    }
+    .text-sm-44{
+        font-size: 44px;
+    }
+    .text-sm-45{
+        font-size: 45px;
+    }
+    .text-sm-46{
+        font-size: 46px;
+    }
+    .text-sm-47{
+        font-size: 47px;
+    }
+    .text-sm-48{
+        font-size: 48px;
+    }
+    .text-sm-49{
+        font-size: 49px;
+    }
+    .text-sm-50{
+        font-size: 50px;
+    }
+    .text-sm-51{
+        font-size: 51px;
+    }
+    .text-sm-52{
+        font-size: 52px;
+    }
+    .text-sm-53{
+        font-size: 53px;
+    }
+    .text-sm-54{
+        font-size: 54px;
+    }
+    .text-sm-55{
+        font-size: 55px;
+    }
+    .text-sm-56{
+        font-size: 56px;
+    }
+    .text-sm-57{
+        font-size: 57px;
+    }
+    .text-sm-58{
+        font-size: 58px;
+    }
+    .text-sm-59{
+        font-size: 59px;
+    }
+    .text-sm-60{
+        font-size: 60px;
+    }
+    .text-sm-61{
+        font-size: 61px;
+    }
+    .text-sm-62{
+        font-size: 62px;
+    }
+    .text-sm-63{
+        font-size: 63px;
+    }
+    .text-sm-64{
+        font-size: 64px;
+    }
+    .text-sm-65{
+        font-size: 65px;
+    }
+    .text-sm-66{
+        font-size: 66px;
+    }
+    .text-sm-67{
+        font-size: 67px;
+    }
+    .text-sm-68{
+        font-size: 68px;
+    }
+    .text-sm-69{
+        font-size: 69px;
+    }
+    .text-sm-70{
+        font-size: 70px;
+    }
+    .text-sm-71{
+        font-size: 71px;
+    }
+    .text-sm-72{
+        font-size: 72px;
+    }
+    .text-sm-73{
+        font-size: 73px;
+    }
+    .text-sm-74{
+        font-size: 74px;
+    }
+    .text-sm-75{
+        font-size: 75px;
+    }
+    .text-sm-76{
+        font-size: 76px;
+    }
+    .text-sm-77{
+        font-size: 77px;
+    }
+    .text-sm-78{
+        font-size: 78px;
+    }
+    .text-sm-79{
+        font-size: 79px;
+    }
+    .text-sm-80{
+        font-size: 80px;
+    }
+    .text-sm-81{
+        font-size: 81px;
+    }
+    .text-sm-82{
+        font-size: 82px;
+    }
+    .text-sm-83{
+        font-size: 83px;
+    }
+    .text-sm-84{
+        font-size: 84px;
+    }
+    .text-sm-85{
+        font-size: 85px;
+    }
+    .text-sm-86{
+        font-size: 86px;
+    }
+    .text-sm-87{
+        font-size: 87px;
+    }
+    .text-sm-88{
+        font-size: 88px;
+    }
+    .text-sm-89{
+        font-size: 89px;
+    }
+    .text-sm-90{
+        font-size: 90px;
+    }
+    .text-sm-91{
+        font-size: 91px;
+    }
+    .text-sm-92{
+        font-size: 92px;
+    }
+    .text-sm-93{
+        font-size: 93px;
+    }
+    .text-sm-94{
+        font-size: 94px;
+    }
+    .text-sm-95{
+        font-size: 95px;
+    }
+    .text-sm-96{
+        font-size: 96px;
+    }
+    .text-sm-97{
+        font-size: 97px;
+    }
+    .text-sm-98{
+        font-size: 98px;
+    }
+    .text-sm-99{
+        font-size: 99px;
+    }
+    .text-sm-100{
+        font-size: 100px;
+    }
+}
+
+
+
+.text-bold{
+    font-weight: bold;
+}
+
+.text-strong{
+    font-weight: 600;
+}
+
+.font-bold{
+    font-weight: bold;
+}
+
+.font-thin{
+    font-weight: 300;
+}
+
+.font-weight-600{
+    font-weight: 600;
+}
+
+
+
+/*=========== Line Height ==================*/
+.line-height-150{
+    line-height: 150%;
+}
+
+.line-height-140{
+    line-height: 140%;
+}
+
+.line-height-130{
+    line-height: 130%;
+}
+
+.line-height-120{
+    line-height: 120%;
+}
+
+.line-height-110{
+    line-height: 110%;
+}
+
+.line-height-100{
+    line-height: 100%;
+}
+
+.line-height-90{
+    line-height: 90%;
+}
+
+.line-height-80{
+    line-height: 80%;
+}
+
+.line-height-70{
+    line-height: 70%;
+}
+
+.line-height-60{
+    line-height: 60%;
+}
+
+.line-height-50{
+    line-height: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============== End Font Size Properties ===================*/
+
+
+
+
+/*============= h1 to h6  header tag properties for header font size ============*/
+h1, .h1 {
+  font-size: 2.5rem;
+}
+
+h2, .h2 {
+  font-size: 2rem;
+}
+
+h3, .h3 {
+  font-size: 1.75rem;
+}
+
+h4, .h4 {
+  font-size: 1.5rem;
+}
+
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+/*============= h1 to h6  header tag properties for header font size =============*/
+
+
+
+
+/*============= White Scale Text Color Properties ============*/
+.text-white {
+  color: #ffffff;
+}
+
+a.text-white:hover, a.text-white:focus {
+  color: #ffffff;
+}
+
+.text-light-white {
+  color: #f5f5f5;
+}
+
+a.text-light-white:hover, a.text-light-white:focus {
+  color: #f5f5f5;
+}
+
+.text-deep-white {
+  color: #e6e6e6;
+}
+
+a.text-deep-white:hover, a.text-deep-white:focus {
+  color: #e6e6e6;
+}
+
+.text-dim-white {
+  color: #d9d9d9;
+}
+
+a.text-dim-white:hover, a.text-dim-white:focus {
+  color: #d9d9d9;
+}
+
+
+/*============= Black Scale Text Color Properties ============*/
+.text-black {
+  color: #000000;
+}
+a.text-black:hover, a.text-black:focus {
+  color: #ffffff;
+}
+
+.text-light-black {
+  color: #222222;
+}
+
+a.text-light-black:hover, a.text-light-black:focus {
+  color: #222222;
+}
+
+.text-deep-black {
+  color: #1f1f1f;
+}
+
+a.text-deep-black:hover, a.text-deep-black:focus {
+  color: #1f1f1f;
+}
+
+.text-dim-black {
+  color: #1a1a1a;
+}
+
+a.text-dim-black:hover, a.text-dim-black:focus {
+  color: #1a1a1a;
+}
+
+
+/*============= Black Scale Text Color Properties ============*/
+.text-dark {
+  color: #404040;
+}
+
+a.text-dark:hover, a.text-dark:focus {
+  color: #404040;
+}
+
+.text-light-dark {
+  color: #595959;
+}
+
+a.text-light-dark:hover, a.text-light-dark:focus {
+  color: #595959;
+}
+
+.text-deep-dark {
+  color: #333333;
+}
+
+a.text-deep-dark:hover, a.text-deep-dark:focus {
+  color: #333333;
+}
+
+.text-dim-dark {
+  color: #262626;
+}
+
+a.text-dim-dark:hover, a.text-dim-dark:focus {
+  color: #262626;
+}
+
+
+/*============= Gray Scale Text Color Properties ============*/
+.text-gray {
+  color: #808080;
+}
+
+a.text-gray:hover, a.text-gray:focus {
+  color: #808080;
+}
+
+.text-light-gray {
+  color: #D3D3D3;
+}
+
+a.text-light-gray:hover, a.text-light-gray:focus {
+  color: #D3D3D3;
+}
+
+.text-deep-gray {
+  color: #A9A9A9;
+}
+
+a.text-deep-gray:hover, a.text-deep-gray:focus {
+  color: #A9A9A9;
+}
+
+.text-dim-gray {
+  color: #696969;
+}
+
+a.text-dim-gray:hover, a.text-dim-gray:focus {
+  color: #696969;
+}
+
+
+/*============= Red Scale Text Color Properties ============*/
+.text-red {
+  color: #ff0000;
+}
+
+a.text-red:hover, a.text-red:focus {
+  color: #ff0000;
+}
+
+.text-light-red {
+  color: #ff4d4d;
+}
+
+a.text-light-red:hover, a.text-light-red:focus {
+  color: #ff3333;
+}
+
+.text-deep-red {
+  color: #b30000;
+}
+
+a.text-deep-red:hover, a.text-deep-red:focus {
+  color: #b30000;
+}
+
+.text-dim-red {
+  color: #990000;
+}
+
+a.text-dim-red:hover, a.text-dim-red:focus {
+  color: #990000;
+}
+
+
+/*============= Green Scale Text Color Properties ============*/
+.text-green {
+  color: #008000;
+}
+
+a.text-green:hover, a.text-green:focus {
+  color: #008000;
+}
+
+.text-light-green {
+  color: #90EE90;
+}
+
+a.text-light-green:hover, a.text-light-green:focus {
+  color: #90EE90;
+}
+
+.text-deep-green {
+  color: #006600;
+}
+
+a.text-deep-green:hover, a.text-deep-green:focus {
+  color: #006600;
+}
+
+.text-dim-green {
+  color: #004d00;
+}
+
+a.text-dim-green:hover, a.text-dim-green:focus {
+  color: #004d00;
+}
+
+
+/*============= Pink Scale Text Color Properties ============*/
+.text-pink {
+  color: #ff8095;
+}
+
+a.text-pink:hover, a.text-pink:focus {
+  color: #ff8095;
+}
+
+.text-light-pink {
+  color: #90EE90;
+}
+
+a.text-light-pink:hover, a.text-light-pink:focus {
+  color: #90EE90;
+}
+
+.text-deep-pink {
+  color: #ff4d6a;
+}
+
+a.text-deep-pink:hover, a.text-deep-pink:focus {
+  color: #ff4d6a;
+}
+
+.text-dim-pink {
+  color: #ff3355;
+}
+
+a.text-dim-pink:hover, a.text-dim-pink:focus {
+  color: #ff3355;
+}
+
+
+/*============= Orange Scale Text Color Properties ============*/
+.text-orange {
+  color: #ff6933;
+}
+
+a.text-orange:hover, a.text-orange:focus {
+  color: #ff6933;
+}
+
+.text-light-orange {
+  color: #ff7c4d;
+}
+
+a.text-light-orange:hover, a.text-light-orange:focus {
+  color: #ff7c4d;
+}
+
+.text-deep-orange {
+  color: #ff571a;
+}
+
+a.text-deep-orange:hover, a.text-deep-orange:focus {
+  color: #ff571a;
+}
+
+.text-dim-orange {
+  color: #ff4500;
+}
+
+a.text-dim-orange:hover, a.text-dim-orange:focus {
+  color: #ff4500;
+}
+
+
+/*============= Orange Scale Text Color Properties ============*/
+.text-blue {
+  color: #0000FF;
+}
+
+a.text-blue:hover, a.text-blue:focus {
+  color: #0000FF;
+}
+
+.text-light-blue {
+  color: #6666ff;
+}
+
+a.text-light-blue:hover, a.text-light-blue:focus {
+  color: #6666ff;
+}
+
+.text-deep-blue {
+  color: #0000cc;
+}
+
+a.text-deep-blue:hover, a.text-deep-blue:focus {
+  color: #0000cc;
+}
+
+.text-dim-blue {
+  color: #00008b;
+}
+
+a.text-dim-blue:hover, a.text-dim-blue:focus {
+  color: #00008b;
+}
+
+
+/*============= Cyan Scale Text Color Properties ============*/
+.text-cyan {
+  color: #00e6e6;
+}
+
+a.text-cyan:hover, a.text-cyan:focus {
+  color: #00FFFF;
+}
+
+.text-light-cyan {
+  color: #33ffff;
+}
+
+a.text-light-cyan:hover, a.text-light-cyan:focus {
+  color: #33ffff;
+}
+
+.text-deep-cyan {
+  color: #00cccc;
+}
+
+a.text-deep-cyan:hover, a.text-deep-cyan:focus {
+  color: #00cccc;
+}
+
+.text-dim-cyan {
+  color: #009999;
+}
+
+a.text-dim-cyan:hover, a.text-dim-cyan:focus {
+  color: #009999;
+}
+
+
+/*============= Sea Aqua Scale Text Color Properties ============*/
+.text-sea-aqua {
+  color: #136c68;
+}
+
+a.text-sea-aqua:hover, a.text-sea-aqua:focus {
+  color: #136c68;
+}
+
+.text-light-sea-aqua {
+  color: #33ffff;
+}
+
+a.text-light-sea-aqua:hover, a.text-light-sea-aqua:focus {
+  color: #33ffff;
+}
+
+.text-deep-sea-aqua {
+  color: #0f5753;
+}
+
+a.text-deep-sea-aqua:hover, a.text-deep-sea-aqua:focus {
+  color: #0f5753;
+}
+
+.text-dim-sea-aqua {
+  color: #0b413e;
+}
+
+a.text-dim-sea-aqua:hover, a.text-dim-sea-aqua:focus {
+  color: #0b413e;
+}
+
+
+/*============= Cyan Scale Text Color Properties ============*/
+.text-yellow {
+  color: #ffff00;
+}
+
+a.text-yellow:hover, a.text-yellow:focus {
+  color: #ffff00;
+}
+
+.text-light-yellow {
+  color: #ffff1a;
+}
+
+a.text-light-yellow:hover, a.text-light-yellow:focus {
+  color: #ffff1a;
+}
+
+.text-deep-yellow {
+  color: #b3b300;
+}
+
+a.text-deep-yellow:hover, a.text-deep-yellow:focus {
+  color: #b3b300;
+}
+
+.text-dim-yellow {
+  color: #808000;
+}
+
+a.text-dim-yellow:hover, a.text-dim-yellow:focus {
+  color: #808000;
+}
+
+/*============ End Font Color Properties ================*/
+
+
+
+/*========= Text Behavior Properties ===========*/
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  .text-sm-left {
+    text-align: left;
+  }
+  .text-sm-right {
+    text-align: right;
+  }
+  .text-sm-center {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-md-left {
+    text-align: left;
+  }
+  .text-md-right {
+    text-align: right;
+  }
+  .text-md-center {
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .text-lg-left {
+    text-align: left;
+  }
+  .text-lg-right {
+    text-align: right;
+  }
+  .text-lg-center {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text-xl-left {
+    text-align: left;
+  }
+  .text-xl-right {
+    text-align: right;
+  }
+  .text-xl-center {
+    text-align: center;
+  }
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+
+
+/*========== left right ===========*/
+.left{
+    left: 0;
+    right: auto;
+}
+
+
+.right{
+    left: auto;
+    right: 0;
+}
+.top{
+    top: 0;
+    bottom: auto;
+}
+
+.bottom{
+    bottom: 0;
+    top: auto;
+}
+
+
+.cover-x{
+    left: 0;
+    right: 0;
+}
+
+.cover-y{
+    top: 0;
+    bottom: 0;
+}
+.cover{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.cover-center-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-x{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center-y{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+/*================ Ratio Box ====================*/
+.box-ratio{
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center 40%;
+}
+
+.box-ratio::before {
+  display: block;
+  content: "";
+}
+
+.box-ratio-content{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+.box-ratio-21by9::before {
+  padding-top: 42.857143%;
+}
+
+.box-ratio-16by-9::before {
+  padding-top: 56.25%;
+}
+
+.box-ratio-4by3::before {
+  padding-top: 75%;
+}
+
+.box-ratio-1by1::before {
+  padding-top: 100%;
+}
+
+
+@media screen and (max-width: 767px) {
+    .box-ratio h1 {
+        font-size: 7vw;
+    }
+    .box-ratio h2 {
+        font-size: 5vw;
+    }
+    .box-ratio h3 {
+        font-size: 4vw;
+    }
+}
+
+
+.ratio-vertics {
+    position: relative;
+    padding-bottom: 100%;
+}
+
+.ratio-vertics img{
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+/*======================== Background Color Properties ===============================*/
+
+
+/*============= White Scale Bg Color Properties ============*/
+.bg-white {
+  background-color: #ffffff;
+}
+.bg-light-white {
+  background-color: #f5f5f5;
+}
+.bg-faded{
+    background-color: #e6e6e6;
+}
+
+.bg-deep-white {
+  background-color: #e6e6e6;
+}
+.bg-dim-white {
+  background-color: #d9d9d9;
+}
+
+
+/*============= Black Scale bg Color Properties ============*/
+.bg-black {
+  background-color: #000000;
+}
+.bg-light-black {
+  background-color: #222222;
+}
+.bg-deep-black {
+  background-color: #1f1f1f;
+}
+.bg-dim-black {
+  background-color: #1a1a1a;
+}
+
+
+/*============= Black Scale bg Color Properties ============*/
+.bg-dark {
+  background-color: #404040;
+}
+
+.bg-light-dark {
+  background-color: #595959;
+}
+.bg-deep-dark {
+  background-color: #333333;
+}
+.bg-dim-dark {
+  background-color: #262626;
+}
+
+
+/*============= Gray Scale bg Color Properties ============*/
+.bg-gray {
+  background-color: #808080;
+}
+.bg-light-gray {
+  background-color: #D3D3D3;
+}
+.bg-deep-gray {
+  background-color: #A9A9A9;
+}
+.bg-dim-gray {
+  background-color: #696969;
+}
+
+
+/*============= Red Scale bg Color Properties ============*/
+.bg-red {
+  background-color: #ff0000;
+}
+.bg-light-red {
+  background-color: #ff4d4d;
+}
+.bg-deep-red {
+  background-color: #b30000;
+}
+.bg-dim-red {
+  background-color: #990000;
+}
+
+
+/*============= Green Scale bg Color Properties ============*/
+.bg-green {
+  background-color: #008000;
+}
+.bg-light-green {
+  background-color: #90EE90;
+}
+.bg-deep-green {
+  background-color: #006600;
+}
+.bg-dim-green {
+  background-color: #004d00;
+}
+
+
+/*============= Pink Scale bg Color Properties ============*/
+.bg-pink {
+  background-color: #ff8095;
+}
+.bg-light-pink {
+  background-color: #90EE90;
+}
+.bg-deep-pink {
+  background-color: #ff4d6a;
+}
+.bg-dim-pink {
+  background-color: #ff3355;
+}
+
+/*============= Orange Scale bg Color Properties ============*/
+.bg-orange {
+  background-color: #ff6933;
+}
+.bg-light-orange {
+  background-color: #ff7c4d;
+}
+.bg-deep-orange {
+  background-color: #ff571a;
+}
+.bg-dim-orange {
+  background-color: #ff4500;
+}
+
+
+/*============= Orange Scale bg Color Properties ============*/
+.bg-blue {
+  background-color: #0000FF;
+}
+.bg-light-blue {
+  background-color: #6666ff;
+}
+.bg-deep-blue {
+  background-color: #0000cc;
+}
+.bg-dim-blue {
+  background-color: #00008b;
+}
+
+/*============= Cyan Scale bg Color Properties ============*/
+.bg-cyan {
+  background-color: #00e6e6;
+}
+.bg-light-cyan {
+  background-color: #33ffff;
+}
+.bg-deep-cyan {
+  background-color: #00cccc;
+}
+.bg-dim-cyan {
+  background-color: #009999;
+}
+
+/*============= Sea Aqua Scale bg Color Properties ============*/
+.bg-sea-aqua {
+  background-color: #136c68;
+}
+.bg-light-sea-aqua {
+  background-color: #33ffff;
+}
+.bg-deep-sea-aqua {
+  background-color: #0f5753;
+}
+.bg-dim-sea-aqua {
+  background-color: #0b413e;
+}
+
+/*============= Cyan Scale bg Color Properties ============*/
+.bg-yellow {
+  background-color: #ffff00;
+}
+.bg-light-yellow {
+  background-color: #ffff1a;
+}
+.bg-deep-yellow {
+  background-color: #b3b300;
+}
+.bg-dim-yellow {
+  background-color: #808000;
+}
+
+
+
+/*============ Background transparency =============*/
+.bg-transparent-1{
+    background-color: rgba(0, 0, 0, .1);
+}
+.bg-transparent-2{
+    background-color: rgba(0, 0, 0, .2);
+}
+.bg-transparent-3{
+    background-color: rgba(0, 0, 0, .3);
+}
+.bg-transparent-4{
+    background-color: rgba(0, 0, 0, .4);
+}
+.bg-transparent-5{
+    background-color: rgba(0, 0, 0, .5);
+}
+.bg-transparent-6{
+    background-color: rgba(0, 0, 0, .6);
+}
+.bg-transparent-7{
+    background-color: rgba(0, 0, 0, .7);
+}
+.bg-transparent-8{
+    background-color: rgba(0, 0, 0, .8);
+}
+.bg-transparent-9{
+    background-color: rgba(0, 0, 0, .9);
+}
+
+
+
+
+/*=============== Opacity ==================*/
+.opacity-0{
+    opacity: 0;
+}
+.opacity-1{
+    opacity: .1;
+}
+.opacity-2{
+    opacity: .2;
+}
+.opacity-3{
+    opacity: .3;
+}
+.opacity-4{
+    opacity: .4;
+}
+.opacity-5{
+    opacity: .5;
+}
+.opacity-6{
+    opacity: .6;
+}
+.opacity-7{
+    opacity: .7;
+}
+.opacity-8{
+    opacity: .8;
+}
+.opacity-9{
+    opacity: .9;
+}
+.opacity-10{
+    opacity: 1;
+}
+
+
+
+
+
+/*=================== End Background Color Properties ===========================*/
+
+
+
+
+
+/*============================= Border and Border Color Properties ===========================================*/
+
+
+.border{
+    border: 1px solid #ddd;
+}
+
+.border-left{
+    border-left: 1px solid #ddd;
+}
+.border-right{
+    border-right: 1px solid #ddd;
+}
+.border-top{
+    border-top: 1px solid #ddd;
+}
+
+.border-bottom{
+    border-bottom: 1px solid #ddd;
+}
+
+.border-x{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.border-y{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+/*======================== Set Border Properties  For a Maximum Dimention Size Of a Device ========================*/
+@media screen and (max-width: 1199px) {
+    .border-xl-down{
+        border: 1px solid #ddd;
+    }
+
+    .border-xl-down-left{
+        border-left: 1px solid #ddd;
+    }
+    .border-xl-down-right{
+        border-right: 1px solid #ddd;
+    }
+    .border-xl-down-top{
+        border-top: 1px solid #ddd;
+    }
+
+    .border-xl-down-bottom{
+        border-bottom: 1px solid #ddd;
+    }
+
+    .border-xl-down-x{
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    .border-xl-down-y{
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .border-lg-down{
+        border: 1px solid #ddd;
+    }
+
+    .border-lg-down-left{
+        border-left: 1px solid #ddd;
+    }
+    .border-lg-down-right{
+        border-right: 1px solid #ddd;
+    }
+    .border-lg-down-top{
+        border-top: 1px solid #ddd;
+    }
+
+    .border-lg-down-bottom{
+        border-bottom: 1px solid #ddd;
+    }
+
+    .border-lg-down-x{
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    .border-lg-down-y{
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .border-md-down{
+        border: 1px solid #ddd;
+    }
+
+    .border-md-down-left{
+        border-left: 1px solid #ddd;
+    }
+    .border-md-down-right{
+        border-right: 1px solid #ddd;
+    }
+    .border-md-down-top{
+        border-top: 1px solid #ddd;
+    }
+
+    .border-md-down-bottom{
+        border-bottom: 1px solid #ddd;
+    }
+
+    .border-md-down-x{
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    .border-md-down-y{
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+    .border-sm-down{
+        border: 1px solid #ddd;
+    }
+
+    .border-sm-down-left{
+        border-left: 1px solid #ddd;
+    }
+    .border-sm-down-right{
+        border-right: 1px solid #ddd;
+    }
+    .border-sm-down-top{
+        border-top: 1px solid #ddd;
+    }
+
+    .border-sm-down-bottom{
+        border-bottom: 1px solid #ddd;
+    }
+
+    .border-sm-down-x{
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    .border-sm-down-y{
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+
+/*======================== Set Border Properties  For a Minimum Dimention Size Of a Device ========================*/
+@media screen and (min-width: 1200px) {
+    .border-xl{
+        border: 1px solid #ddd;
+    }
+
+    .border-xl-left{
+        border-left: 1px solid #ddd;
+    }
+    .border-xl-right{
+        border-right: 1px solid #ddd;
+    }
+    .border-xl-top{
+        border-top: 1px solid #ddd;
+    }
+
+    .border-xl-bottom{
+        border-bottom: 1px solid #ddd;
+    }
+
+    .border-xl-x{
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    .border-xl-y{
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .border-lg{
+        border: 1px solid #ddd;
+    }
+
+    .border-lg-left{
+        border-left: 1px solid #ddd;
+    }
+    .border-lg-right{
+        border-right: 1px solid #ddd;
+    }
+    .border-lg-top{
+        border-top: 1px solid #ddd;
+    }
+
+    .border-lg-bottom{
+        border-bottom: 1px solid #ddd;
+    }
+
+    .border-lg-x{
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    .border-lg-y{
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .border-md{
+        border: 1px solid #ddd;
+    }
+
+    .border-md-left{
+        border-left: 1px solid #ddd;
+    }
+    .border-md-right{
+        border-right: 1px solid #ddd;
+    }
+    .border-md-top{
+        border-top: 1px solid #ddd;
+    }
+
+    .border-md-bottom{
+        border-bottom: 1px solid #ddd;
+    }
+
+    .border-md-x{
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    .border-md-y{
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+
+@media screen and (min-width: 576px) {
+    .border-sm{
+        border: 1px solid #ddd;
+    }
+
+    .border-sm-left{
+        border-left: 1px solid #ddd;
+    }
+    .border-sm-right{
+        border-right: 1px solid #ddd;
+    }
+    .border-sm-top{
+        border-top: 1px solid #ddd;
+    }
+
+    .border-sm-bottom{
+        border-bottom: 1px solid #ddd;
+    }
+
+    .border-sm-x{
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    .border-sm-y{
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+
+/*================= Border Width Properties ===================*/
+.border-2px{
+    border-width: 2px !important;
+}
+.border-3px{
+    border-width: 3px !important;
+}
+.border-4px{
+    border-width: 4px !important;
+}
+.border-5px{
+    border-width: 5px !important;
+}
+.border-6px{
+    border-width: 6px !important;
+}
+.border-7px{
+    border-width: 7px !important;
+}
+.border-8px{
+    border-width: 8px !important;
+}
+.border-9px{
+    border-width: 9px !important;
+}
+.border-10px{
+    border-width: 10px !important;
+}
+
+
+.radius {
+    border-radius: 0.25rem;
+    -webkit-border-radius: 0.25rem;
+}
+
+.radius-top {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    -webkit-border-top-left-radius: 0.25rem;
+    -webkit-border-top-right-radius: 0.25rem;
+}
+
+.radius-right {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    -webkit-border-top-right-radius: 0.25rem;
+    -webkit-border-bottom-right-radius: 0.25rem;
+}
+
+.radius-bottom {
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    -webkit-border-bottom-right-radius: 0.25rem;
+    -webkit-border-bottom-left-radius: 0.25rem;
+}
+
+.radius-left {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    -webkit-border-top-left-radius: 0.25rem;
+    -webkit-border-bottom-left-radius: 0.25rem;
+}
+
+.radius-circle {
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+}
+
+.radius-0 {
+    border-radius: 0;
+}
+
+.radius-25 {
+    border-radius: 25%;
+}
+
+.radius-50 {
+    border-radius: 50%;
+}
+
+.radius-75 {
+    border-radius: 75%;
+}
+
+.radius-100 {
+    border-radius: 100%;
+}
+
+
+/*======== Border Style Properties ============*/
+.border-dotted{
+    border-style: dotted;
+}
+.border-dashed{
+    border-style: dashed;
+}
+.border-double{
+    border-style: double;
+}
+.border-groove{
+    border-style: groove;
+}
+.border-ridge{
+    border-style: ridge;
+}
+.border-inset{
+    border-style: inset;
+}
+.border-outset{
+    border-style: outset;
+}
+.border-dotted{
+    border-style: dotted;
+}
+
+
+
+/*============= White Scale border Color Properties ============*/
+.border-white {
+  border-color: #ffffff !important;
+}
+.border-light-white {
+  border-color: #f5f5f5 !important;
+}
+.border-deep-white {
+  border-color: #e6e6e6 !important;
+}
+.border-dim-white {
+  border-color: #d9d9d9 !important;
+}
+
+
+/*============= Black Scale border Color Properties ============*/
+.border-black {
+  border-color: #000000 !important;
+}
+.border-light-black {
+  border-color: #222222 !important;
+}
+.border-deep-black {
+  border-color: #1f1f1f !important;
+}
+.border-dim-black {
+  border-color: #1a1a1a !important;
+}
+
+
+/*============= Black Scale border Color Properties ============*/
+.border-dark {
+  border-color: #404040 !important;
+}
+
+.border-light-dark {
+  border-color: #595959 !important;
+}
+.border-deep-dark {
+  border-color: #333333 !important;
+}
+.border-dim-dark {
+  border-color: #262626 !important;
+}
+
+
+/*============= Gray Scale border Color Properties ============*/
+.border-gray {
+  border-color: #808080 !important;
+}
+.border-light-gray {
+  border-color: #D3D3D3 !important;
+}
+.border-deep-gray {
+  border-color: #A9A9A9 !important;
+}
+.border-dim-gray {
+  border-color: #696969 !important;
+}
+
+
+/*============= Red Scale border Color Properties ============*/
+.border-red {
+  border-color: #ff0000 !important;
+}
+.border-light-red {
+  border-color: #ff4d4d !important;
+}
+.border-deep-red {
+  border-color: #b30000 !important;
+}
+.border-dim-red {
+  border-color: #990000 !important;
+}
+
+
+/*============= Green Scale border Color Properties ============*/
+.border-green {
+  border-color: #008000 !important;
+}
+.border-light-green {
+  border-color: #90EE90 !important;
+}
+.border-deep-green {
+  border-color: #006600 !important;
+}
+.border-dim-green {
+  border-color: #004d00 !important;
+}
+
+
+/*============= Pink Scale border Color Properties ============*/
+.border-pink {
+  border-color: #ff8095 !important;
+}
+.border-light-pink {
+  border-color: #90EE90 !important;
+}
+.border-deep-pink {
+  border-color: #ff4d6a !important;
+}
+.border-dim-pink {
+  border-color: #ff3355 !important;
+}
+
+/*============= Orange Scale border Color Properties ============*/
+.border-orange {
+  border-color: #ff6933 !important;
+}
+.border-light-orange {
+  border-color: #ff7c4d !important;
+}
+.border-deep-orange {
+  border-color: #ff571a !important;
+}
+.border-dim-orange {
+  border-color: #ff4500 !important;
+}
+
+
+/*============= Orange Scale border Color Properties ============*/
+.border-blue {
+  border-color: #0000FF !important;
+}
+.border-light-blue {
+  border-color: #6666ff !important;
+}
+.border-deep-blue {
+  border-color: #0000cc !important;
+}
+.border-dim-blue {
+  border-color: #00008b !important;
+}
+
+/*============= Cyan Scale border Color Properties ============*/
+.border-cyan {
+  border-color: #00e6e6 !important;
+}
+.border-light-cyan {
+  border-color: #33ffff !important;
+}
+.border-deep-cyan {
+  border-color: #00cccc !important;
+}
+.border-dim-cyan {
+  border-color: #009999 !important;
+}
+
+/*============= Sea Aqua Scale border Color Properties ============*/
+.border-sea-aqua {
+  border-color: #136c68 !important;
+}
+.border-light-sea-aqua {
+  border-color: #33ffff !important;
+}
+.border-deep-sea-aqua {
+  border-color: #0f5753 !important;
+}
+.border-dim-sea-aqua {
+  border-color: #0b413e !important;
+}
+
+
+/*============= Cyan Scale border Color Properties ============*/
+.border-yellow {
+  border-color: #ffff00 !important;
+}
+.border-light-yellow {
+  border-color: #ffff1a !important;
+}
+.border-deep-yellow {
+  border-color: #b3b300 !important;
+}
+.border-dim-yellow {
+  border-color: #808000 !important;
+}
+
+
+
+.no-border{
+    border: none;
+}
+
+
+/*======================== End Border and Border Color Properties =========================*/
+
+
+
+
+
+
+/*================= Set Data or tag or any information  Width Properties With Dimention Of device Size =====================*/
+
+.w-25 {
+    width: 25%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+
+/*=============== Set Width For Any Item, Tag or Data In Maximum Size Dimention Of A Device =================== */
+@media screen and (max-width: 575px) {
+    .w-sm-down-25 {
+      width: 25%;
+    }
+
+    .w-sm-down-50 {
+      width: 50%;
+    }
+
+    .w-sm-down-75 {
+      width: 75%;
+    }
+
+    .w-sm-down-90 {
+      width: 90%;
+    }
+
+    .w-sm-down-100 {
+      width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .w-md-down-25 {
+      width: 25%;
+    }
+
+    .w-md-down-50 {
+      width: 50%;
+    }
+
+    .w-md-down-75 {
+      width: 75%;
+    }
+
+    .w-md-down-90 {
+      width: 90%;
+    }
+
+    .w-md-down-100 {
+      width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .w-lg-down-25 {
+      width: 25%;
+    }
+
+    .w-lg-down-50 {
+      width: 50%;
+    }
+
+    .w-lg-down-75 {
+      width: 75%;
+    }
+
+    .w-lg-down-90 {
+      width: 90%;
+    }
+
+    .w-lg-down-100 {
+      width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 1199px) {
+    .w-xl-down-25 {
+      width: 25%;
+    }
+
+    .w-xl-down-50 {
+      width: 50%;
+    }
+
+    .w-xl-down-75 {
+      width: 75%;
+    }
+
+    .w-xl-down-90 {
+      width: 90%;
+    }
+
+    .w-xl-down-100 {
+      width: 100%;
+    }
+}
+
+
+/*=============== Set Width For Any Item, Tag or Data In Minimum Size Dimention Of A Device =================== */
+
+@media screen and (min-width: 576px) {
+    .w-sm-25 {
+      width: 25%;
+    }
+
+    .w-sm-50 {
+      width: 50%;
+    }
+
+    .w-sm-75 {
+      width: 75%;
+    }
+
+    .w-sm-90 {
+      width: 90%;
+    }
+
+    .w-sm-100 {
+      width: 100%;
+    }
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    .w-md-25 {
+      width: 25%;
+    }
+
+    .w-md-50 {
+      width: 50%;
+    }
+
+    .w-md-75 {
+      width: 75%;
+    }
+
+    .w-md-90 {
+      width: 90%;
+    }
+
+    .w-md-100 {
+      width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+
+    .w-lg-25 {
+      width: 25%;
+    }
+
+    .w-lg-50 {
+      width: 50%;
+    }
+
+    .w-lg-75 {
+      width: 75%;
+    }
+
+    .w-lg-90 {
+      width: 90%;
+    }
+
+    .w-lg-100 {
+      width: 100%;
+    }
+
+
+}
+
+
+
+
+@media screen and (min-width: 1200px) {
+    .w-xl-25 {
+      width: 25%;
+    }
+
+    .w-xl-50 {
+      width: 50%;
+    }
+
+    .w-xl-75 {
+      width: 75%;
+    }
+
+
+    .w-xl-90 {
+      width: 90%;
+    }
+
+    .w-xl-100 {
+      width: 100%;
+    }
+}
+
+
+/*================= End Data or tag or any information  Width Properties With Dimention Of device Size =====================*/
+
+
+
+
+/*================= Set Data or tag or any information  Height Properties With Dimention Of device Size =====================*/
+
+.h-25 {
+    width: 25%;
+}
+
+.h-50 {
+    width: 50%;
+}
+
+.h-75 {
+    width: 75%;
+}
+
+.h-90 {
+    width: 90%;
+}
+
+.h-100 {
+    width: 100%;
+}
+
+
+/*=============== Set Height For Any Item, Tag or Data In Maximum Size Dimention Of A Device =================== */
+
+@media screen and (max-width: 575px) {
+    .hh-sm-down-25 {
+      height: 25%;
+    }
+
+    .hh-sm-down-50 {
+      height: 50%;
+    }
+
+    .hh-sm-down-75 {
+      height: 75%;
+    }
+
+    .hh-sm-down-90 {
+      height: 90%;
+    }
+
+    .hh-sm-down-100 {
+      height: 100%;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .h-md-down-25 {
+      height: 25%;
+    }
+
+    .h-md-down-50 {
+      height: 50%;
+    }
+
+    .h-md-down-75 {
+      height: 75%;
+    }
+
+    .h-md-down-90 {
+      height: 90%;
+    }
+
+    .h-md-down-100 {
+      height: 100%;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .h-lg-down-25 {
+      height: 25%;
+    }
+
+    .h-lg-down-50 {
+      height: 50%;
+    }
+
+    .h-lg-down-75 {
+      height: 75%;
+    }
+
+    .h-lg-down-90 {
+      height: 90%;
+    }
+
+    .h-lg-down-100 {
+      height: 100%;
+    }
+}
+
+
+@media screen and (max-width: 1199px) {
+    .h-xl-down-25 {
+      height: 25%;
+    }
+
+    .h-xl-down-50 {
+      height: 50%;
+    }
+
+    .h-xl-down-75 {
+      height: 75%;
+    }
+
+    .h-xl-down-90 {
+      height: 90%;
+    }
+
+    .h-xl-down-100 {
+      height: 100%;
+    }
+}
+
+
+/*=============== Set height For Any Item, Tag or Data In Minimum Size Dimention Of A Device =================== */
+@media screen and (min-width: 576px) {
+    .h-sm-25 {
+      height: 25%;
+    }
+
+    .h-sm-50 {
+      height: 50%;
+    }
+
+    .h-sm-75 {
+      height: 75%;
+    }
+
+    .h-sm-90 {
+      height: 90%;
+    }
+
+    .h-sm-100 {
+      height: 100%;
+    }
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    .h-md-25 {
+      height: 25%;
+    }
+
+    .h-md-50 {
+      height: 50%;
+    }
+
+    .h-md-75 {
+      height: 75%;
+    }
+
+    .h-md-90 {
+      height: 90%;
+    }
+
+    .h-md-100 {
+      height: 100%;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+
+    .h-lg-25 {
+      height: 25%;
+    }
+
+    .h-lg-50 {
+      height: 50%;
+    }
+
+    .h-lg-75 {
+      height: 75%;
+    }
+
+    .h-lg-90 {
+      height: 90%;
+    }
+
+    .h-lg-100 {
+      height: 100%;
+    }
+
+
+}
+
+
+
+@media screen and (min-width: 1200px) {
+    .h-xl-25 {
+      height: 25%;
+    }
+
+    .h-xl-50 {
+      height: 50%;
+    }
+
+    .h-xl-75 {
+      height: 75%;
+    }
+
+
+    .h-xl-90 {
+      height: 90%;
+    }
+
+    .h-xl-100 {
+      height: 100%;
+    }
+}
+
+
+
+
+
+/*================== Width With Pixel =================*/
+.w-50px{
+    width: 50px;
+}
+
+.w-100px{
+    width: 100px;
+}
+
+.w-150px{
+    width: 150px;
+}
+
+.w-200px{
+    width: 200px;
+}
+
+.w-250px{
+    width: 250px;
+}
+
+.w-300px{
+    width: 300px;
+}
+
+.w-350px{
+    width: 350px;
+}
+
+.w-400px{
+    width: 400px;
+}
+
+.w-450px{
+    width: 450px;
+}
+
+.w-500px{
+    width: 500px;
+}
+
+.w-550px{
+    width: 550px;
+}
+
+.w-600px{
+    width: 600px;
+}
+
+.w-650px{
+    width: 650px;
+}
+
+
+.w-700px{
+    width: 700px;
+}
+
+.w-750px{
+    width: 750px;
+}
+
+.w-800px{
+    width: 800px;
+}
+
+.w-850px{
+    width: 850px;
+}
+
+.w-900px{
+    width: 900px;
+}
+
+.w-950px{
+    width: 950px;
+}
+
+.w-1000px{
+    width: 1000px;
+}
+
+
+/*=============== Min with set with pixel parfect ===================*/
+.mw-50px{
+    min-width: 50px;
+}
+
+.mw-100px{
+    min-width: 100px;
+}
+
+.mw-150px{
+    min-width: 150px;
+}
+
+.mw-200px{
+    min-width: 200px;
+}
+
+.mw-250px{
+    min-width: 250px;
+}
+
+.mw-300px{
+    min-width: 300px;
+}
+
+.mw-350px{
+    min-width: 350px;
+}
+
+.mw-400px{
+    min-width: 400px;
+}
+
+.mw-450px{
+    min-width: 450px;
+}
+
+.mw-500px{
+    min-width: 500px;
+}
+
+.mw-550px{
+    min-width: 550px;
+}
+
+.mw-600px{
+    min-width: 600px;
+}
+
+.mw-650px{
+    min-width: 650px;
+}
+
+
+.mw-700px{
+    min-width: 700px;
+}
+
+.mw-750px{
+    min-width: 750px;
+}
+
+.mw-800px{
+    min-width: 800px;
+}
+
+.mw-850px{
+    min-width: 850px;
+}
+
+.mw-900px{
+    min-width: 900px;
+}
+
+.mw-950px{
+    min-width: 950px;
+}
+
+.mw-1000px{
+    min-width: 1000px;
+}
+
+
+
+
+/*============= Height Set With Pixel ========================*/
+.h-30px{
+    height: 30px;
+}
+
+.h-50px{
+    height: 50px;
+}
+
+.h-100px{
+    height: 100px;
+}
+
+.h-150px{
+    height: 150px;
+}
+
+.h-200px{
+    height: 200px;
+}
+
+.h-250px{
+    height: 250px;
+}
+
+.h-300px{
+    height: 300px;
+}
+
+.h-350px{
+    height: 350px;
+}
+
+.h-400px{
+    height: 400px;
+}
+
+.h-450px{
+    height: 450px;
+}
+
+.h-500px{
+    height: 500px;
+}
+
+.h-550px{
+    height: 550px;
+}
+
+.h-600px{
+    height: 600px;
+}
+
+.h-650px{
+    height: 650px;
+}
+
+
+.h-700px{
+    height: 700px;
+}
+
+.h-750px{
+    height: 750px;
+}
+
+.h-800px{
+    height: 800px;
+}
+
+.h-850px{
+    height: 850px;
+}
+
+.h-900px{
+    height: 900px;
+}
+
+.h-950px{
+    height: 950px;
+}
+
+.h-1000px{
+    height: 1000px;
+}
+
+
+/*============= Min Height Set With Pixel ========================*/
+.mh-50px{
+    min-height: 50px;
+}
+
+.mh-100px{
+    min-height: 100px;
+}
+
+.mh-150px{
+    min-height: 150px;
+}
+
+.mh-200px{
+    min-height: 200px;
+}
+
+.mh-250px{
+    min-height: 250px;
+}
+
+.mh-300px{
+    min-height: 300px;
+}
+
+.mh-350px{
+    min-height: 350px;
+}
+
+.mh-400px{
+    min-height: 400px;
+}
+
+.mh-450px{
+    min-height: 450px;
+}
+
+.mh-500px{
+    min-height: 500px;
+}
+
+.mh-550px{
+    min-height: 550px;
+}
+
+.mh-600px{
+    min-height: 600px;
+}
+
+.mh-650px{
+    min-height: 650px;
+}
+
+
+.mh-700px{
+    min-height: 700px;
+}
+
+.mh-750px{
+    min-height: 750px;
+}
+
+.mh-800px{
+    min-height: 800px;
+}
+
+.mh-850px{
+    min-height: 850px;
+}
+
+.mh-900px{
+    min-height: 900px;
+}
+
+.mh-950px{
+    min-height: 950px;
+}
+
+.mh-1000px{
+    min-height: 1000px;
+}
+/*================  End Mh set With Pixel ==========================*/
+
+
+
+
+
+
+/*================= End Data or tag or any information  height Properties With Dimention Of device Size =====================*/
+
+
+
+/*======================================================
+    ////Style:  Hide Or Show Item , Block item Data Tag
+    ////flex item Etc, Wrap Item Or Data Tag Etc.
+ =========================================================*/
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+
+.d-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flex-wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+
+
+@media screen and (max-width: 1199px) {
+    .d-xl-down-none {
+        display: none;
+    }
+
+    .d-xl-down-block {
+        display: block;
+    }
+
+
+    .d-xl-down-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .d-lg-down-none {
+        display: none;
+    }
+
+    .d-lg-down-block {
+        display: block;
+    }
+
+
+    .d-lg-down-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .d-md-down-none {
+        display: none;
+    }
+
+    .d-md-down-block {
+        display: block;
+    }
+
+
+    .d-md-down-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .d-sm-down-none {
+        display: none;
+    }
+
+    .d-sm-down-block {
+        display: block;
+    }
+
+
+    .d-sm-down-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .d-xl-none {
+        display: none;
+    }
+
+    .d-xl-block {
+        display: block;
+    }
+
+    .d-xl-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .d-lg-none {
+        display: none;
+    }
+
+    .d-lg-block {
+        display: block;
+    }
+
+    .d-lg-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .d-md-none {
+        display: none;
+    }
+
+    .d-md-block {
+        display: block;
+    }
+
+
+    .d-md-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .d-sm-none {
+        display: none;
+    }
+
+    .d-sm-block {
+        display: block;
+    }
+
+
+    .d-sm-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+
+
+/*=========== Properties  For Floating Item Or Clear Content =============*/
+
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+
+.float-none{
+    float: none;
+}
+
+.clear::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+
+
+/*=============== Rotate Scale Properties ===================*/
+.rotate-0{
+    transform: rotate(0deg);
+}
+
+.rotate-15{
+    transform: rotate(15deg);
+}
+
+
+.rotate-30{
+    transform: rotate(30deg);
+}
+
+
+.rotate-45{
+    transform: rotate(45deg);
+}
+
+.rotate-60{
+    transform: rotate(60deg);
+}
+
+.rotate-75{
+    transform: rotate(75deg);
+}
+
+.rotate-90{
+    transform: rotate(90deg);
+}
+
+
+.rotate-180{
+    transform: rotate(180deg);
+}
+
+.rotate-270{
+    transform: rotate(270deg);
+}
+
+.rotate-360{
+    transform: rotate(360deg);
+}
+
+
+/*================ Image Properties ===============*/
+.img-responsive{
+    max-width: 100%;
+    height: auto;
+}
+
+.img-circle{
+    max-width: 100%;
+    height: auto;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+/*================ Margin Padding Properties ==========================*/
+
+
+
+
+/*==================== Sticky Position ================*/
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+
+  .sticky-top-50 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px;
+    z-index: 1020;
+  }
+
+  .sticky-top-100 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+    z-index: 1020;
+  }
+
+  .sticky-top-150 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 150px;
+    z-index: 1020;
+  }
+
+  .sticky-top-200 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 200px;
+    z-index: 1020;
+  }
+}
+
+
+
+/*========= box size =========*/
+.box-5{
+    height: 5px;
+    width: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.box-5 img{
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.box-5 i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-5 .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-10{
+    height: 10px;
+    width: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.box-10 img{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.box-10 i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-10 .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+.box-15{
+    height: 15px;
+    width: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.box-15 img{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.box-15 i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-15 .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+.box-20{
+    height: 20px;
+    width: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.box-20 img{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.box-20 i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-20 .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+.box-25{
+    height: 25px;
+    width: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.box-25 img{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.box-25 i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-25 .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.box-30{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.box-30 img{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.box-30 i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-30 .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.box-40{
+    height: 40px;
+    width: 40px;
+    display: block;
+    position: relative;
+}
+
+.box-40 i, .box-40 .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-40 img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 36px;
+    max-width: 36px;
+}
+
+.box-50{
+    height: 50px;
+    width: 50px;
+    display: block;
+    position: relative;
+}
+
+.box-50 i, .box-50 .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-50 img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 46px;
+    max-width: 46px;
+}
+
+
+
+.box-60{
+    height: 60px;
+    width: 60px;
+    display: block;
+    position: relative;
+}
+
+.box-60 i, .box-60 .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-60 img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 56px;
+    max-width: 56px;
+}
+
+
+.box-70{
+    height: 70px;
+    width: 70px;
+    display: block;
+    position: relative;
+}
+
+.box-70 i, .box-70 .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-70 img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 66px;
+    max-width: 66px;
+}
+
+
+
+
+
+.box-80{
+    height: 80px;
+    width: 80px;
+    display: block;
+    position: relative;
+}
+
+.box-80 i, .box-80 .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-80 img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 76px;
+    max-width: 76px;
+}
+
+
+
+
+
+.box-90{
+    height: 90px;
+    width: 90px;
+    display: block;
+    position: relative;
+}
+
+.box-90 i, .box-80 .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-90 img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 86px;
+    max-width: 86px;
+}
+
+
+
+.box-100{
+    height: 100px;
+    width: 100px;
+    display: block;
+    position: relative;
+}
+
+.box-100 i, .box-100 .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-100 img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 96px;
+    max-width: 96px;
+}
+
+
+
+
+.box-110{
+    height: 110px;
+    width: 110px;
+    display: block;
+    position: relative;
+}
+
+.box-110 i, .box-100 .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-110 img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 106px;
+    max-width: 106px;
+}
+
+
+
+.box-120{
+    height: 120px;
+    width: 120px;
+    display: block;
+    position: relative;
+}
+
+.box-120 i, .box-120 .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-120 img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 116px;
+    max-width: 116px;
+}
+
+
+
+
+.box-130{
+    height: 130px;
+    width: 130px;
+    display: block;
+    position: relative;
+}
+
+.box-130 i, .box-130 .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-130 img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 126px;
+    max-width: 126px;
+}
+
+
+
+
+.box-140{
+    height: 140px;
+    width: 140px;
+    display: block;
+    position: relative;
+}
+
+.box-140 i, .box-140 .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-140 img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 136px;
+    max-width: 136px;
+}
+
+
+
+.box-150{
+    height: 150px;
+    width: 150px;
+    display: block;
+    position: relative;
+}
+
+.box-150 i, .box-150 .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-150 img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 146px;
+    max-width: 146px;
+}
+
+
+
+/*============= overflow Action ===============*/
+.overflow-hidden{
+    overflow: hidden;
+}

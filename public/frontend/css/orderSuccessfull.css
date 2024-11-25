@@ -1,0 +1,94 @@
+div#orderSuccessIcon {
+    color: #159c15;
+    font-size: 100px;
+    display: grid;
+    place-items: center;
+    width: 102px;
+    margin: auto;
+    margin-top:1%;
+}
+div#OrderSuccessTitle {
+    color: #3e3e3e;
+    font-family: arial black;
+    font-size: 25px;
+}
+div#orderDeliveryTime {
+    /*width: 410px;*/
+    color: #656262;
+    font-size: 15px;
+    /*display: grid;*/
+    /*place-items: center;*/
+    /*line-height: 21px;*/
+    /*margin:auto;*/
+}
+table, tr{
+    color: #c2c1c1;
+    font-family: arial b;
+}
+table td{
+    color:black;
+}
+#OrderDetail2 {
+    width: 205px;
+    text-align: left;
+}
+#OrderDetail1 img {
+    width:100px;
+    height: 60px;
+}
+td#OrderDetail3 {
+    text-align: left;
+    width:100px;
+}
+td#OrderDetail1 {
+    width: 130px;
+}
+#orderDetailsRow {
+    border-bottom: 1px solid #d8d8d8;
+    border-top: 1px solid #d8d8d8;
+    height: 70px;
+}
+div#wrapingOrder {
+    width: 420px;
+    margin: auto;
+    margin-top: 3%;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px;
+    background: white;
+    box-shadow: 0px 0px 6px #b8b8b8;
+    margin-bottom:2%;
+}
+
+#backButtonOrderPaze{
+    width: 135px;
+    margin:auto;
+    transition:1s;
+
+}
+#backButtonOrderPaze:hover{
+    transform:scale(1.1);
+}
+@media (max-width: 450px) {
+    div#wrapingOrder {
+        width: 100%;
+        margin-bottom:3%;
+
+    }
+
+}
+@media (max-width: 450px) {
+    div#OrderSuccessTitle {
+        font-size: 20px;
+    }
+
+}
+@media (max-width: 450px) {
+    div#orderDeliveryTime {
+
+        color: #656262;
+        font-size: 13px;
+
+    }
+
+}

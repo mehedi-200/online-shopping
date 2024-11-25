@@ -1,0 +1,67 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #1b263b, #3aa7a3);
+    padding: 50px 0; /* Made the hero section thinner */
+}
+
+/* Feature Box Styling */
+.feature-box {
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box .icon {
+    margin-bottom: 20px;
+}
+p.size {
+    font-size: 13px;
+}
+@media (max-width: 1407px) {
+    p.size {
+        font-size: 12px;
+    }
+
+}
+footer {
+    background-color: #202020;
+}
+@media (max-width: 1353px) {
+    p#titleOfEmail{
+        font-size:14px;
+    }
+
+}
+@media (max-width: 991px) {
+    p#titleOfEmail{
+        font-size:13px;
+    }
+
+}
+@media (max-width: 600px) {
+    p#titleOfEmail{
+        font-size:15px;
+    }
+
+}
+@media (max-width: 1299px) {
+    #titleOf{
+        font-size:17px;
+    }
+
+}
+@media (max-width: 767px) {
+    p#titleOfEmail{
+        font-size:15px;
+    }
+
+}
+

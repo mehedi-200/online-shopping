@@ -1,0 +1,226 @@
+div#wrapAllCover{
+    width:100%;
+    height:400px;
+    position:relative;
+}
+#cover {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+@media(max-width: 991px){
+    div#wrapAllCover{
+        height:330px;
+    }
+}
+@media(max-width: 767px){
+    div#wrapAllCover{
+        height:230px;
+    }
+}
+@media(max-width: 499px){
+    div#wrapAllCover{
+        height:130px;
+    }
+}
+#coverImage{
+    width:100%;
+    height:auto;
+    position:absolute;
+
+}
+button#coverButton {
+    width: 17%;
+    background: #000000a3;
+    z-index: 1;
+    position: absolute;
+    color: white;
+    right: 10px;
+    bottom: 10px;
+    font-size: 88%;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 9px;
+    border: none;
+}
+@media(max-width: 991px){
+    button#coverButton{
+        font-size: 60%;
+        right: 10px;
+        bottom: 10px;
+    }
+}
+@media(max-width: 767px){
+    button#coverButton{
+        font-size: 40%;
+        height: 30px;
+    }
+}
+@media(max-width: 499px){
+    button#coverButton{
+        font-size: 30%;
+        height: 20px;
+    }
+}
+
+
+/*profile section here*/
+
+#profile {
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 5px white;
+    bottom: -24%;
+    right: 40%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+@media(max-width: 767px){
+    #profile {
+        width: 150px;
+        height: 150px;
+        bottom: -35%;
+        right: 37%;
+    }
+}
+@media(max-width: 499px){
+    #profile {
+        width: 132px;
+        height: 132px;
+        bottom: -65%;
+        right: 36%;
+    }
+}
+#profileImage {
+    width: 100%;
+    height: auto;
+
+}
+button#profileButton {
+    position: absolute;
+    z-index: 4;
+    bottom: 14%;
+    right: 7%;
+    border-radius: 48%;
+    width: 35px;
+    height: 35px;
+    background: #00000057;
+    color: white;
+    border: 1px solid #e0dfdf80;
+}
+@media(max-width: 767px){
+    button#profileButton {
+        bottom: 14%;
+        right: 5%;
+    }
+}
+@media(max-width: 499px){
+    button#profileButton {
+        bottom: 14%;
+        right: 3%;
+    }
+}
+
+/*profile section end here*/
+
+button.overview {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 0px;
+    font-weight: bold;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 15px;
+    font-size:20px;
+}
+div#overViewButton{
+    margin-top:130px;
+}
+@media(max-width: 599px){
+    div#overViewButton{
+        margin-top:100px;
+    }
+}
+ul.cover2buttons {
+    background: white;
+    font-weight: bold;
+    line-height: 13px;
+    padding: 32px 23px;
+    position: absolute;
+    right: 1%;
+    bottom: 9%;
+    border-radius: 10px;
+    transition: 1s;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    display: grid;
+    justify-content: center;
+}
+@media (max-width: 550px) {
+    ul.cover2buttons {
+        background: white;
+        font-weight: bold;
+        line-height: 10px;
+        padding: 25px 15px;
+        position: absolute;
+        right: 1%;
+        bottom: 9%;
+        border-radius: 10px;
+        transition: 1s;
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+}
+ul.cover3buttons {
+    transform: scaleY(1);
+    transform-origin: bottom;
+}
+#small_profile_images{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    overflow:hidden;
+}
+#small_profile_images img{
+    max-width:100%;
+    height:auto;
+}
+div#imageForProfile {
+    width: 100%;
+    border-radius: 9px;
+    margin-bottom: 10%;
+    margin-top: 0;
+    margin-right:0;
+}
+#wrapImageColumn{
+    display: flex;
+    padding: 14px 10px;
+    gap: 14px;
+    font-weight: bold;
+    background: #ffffff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#wrapAllUploader{
+    overflow:scroll;
+    width:100%;
+    background:none;
+    height: 700px;
+    overflow-x:hidden;
+    margin-top:0px;
+}
+#wrapAllUploader::-webkit-scrollbar {
+    display: none; /* স্ক্রল বার লুকানো */
+}

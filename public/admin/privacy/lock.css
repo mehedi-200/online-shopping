@@ -1,0 +1,91 @@
+
+/* Card Styles */
+.card {
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin:auto;
+}
+
+.card-title {
+    font-size: 2rem;
+    color: #283c86;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Input Fields and Labels */
+.form-label {
+    font-weight: 500;
+    color: #333;
+}
+
+.form-control {
+    border-radius: 8px;
+    height: 45px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #45a247;
+    box-shadow: 0 0 8px rgba(69, 162, 71, 0.25);
+}
+
+/* Button Styles */
+.btn-primary {
+    background: linear-gradient(90deg, #283c86, #45a247);
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    transition: background 0.4s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(90deg, #45a247, #283c86);
+}
+
+/* Icon Styles */
+.icon-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.icon-container i {
+    font-size: 3rem;
+    color: #283c86;
+}
+
+/* Error Message */
+.error-message {
+    font-size: 0.9rem;
+    color: red;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        padding: 2rem 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 1.5rem 1rem;
+    }
+}
