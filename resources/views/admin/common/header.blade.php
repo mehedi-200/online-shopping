@@ -51,10 +51,14 @@
 {{--                                @if(profile_picture(Auth()->user()->id) === 'yes')--}}
 {{--                                    <img src="{{asset('profile/'.profile_picture(Auth()->user()->id))}}" class="rounded-circle" alt="Avatar">--}}
 {{--                                @endif--}}
-                                @foreach(profile_picture()->where('user_id',Auth()->user()->id)->take(1) as $profile_image)
-                                    <img src="{{asset('profile/'.$profile_image->image)}}" class="rounded-circle" alt="Avatar">
+                               @if(profile_picture_check(Auth()->user()->id) === 'yes')
+                                    <img src="{{asset('profile/profile.jpg')}}" class="rounded-circle" alt="Avatar">
 
-                                @endforeach
+                                @else
+                                    @foreach(profile_picture()->where('user_id',Auth()->user()->id)->take(1) as $profile_image)
+                                        <img src="{{asset('profile/'.$profile_image->image)}}" class="rounded-circle" alt="Avatar">
+                                    @endforeach
+                               @endif
                             </span>
                         </span>
                     </a>
@@ -63,7 +67,14 @@
                             <div class="dropdown-content-header d-flex align-items-center bg-info p-2 ">
                                 <div class="me-3">
                                     <div class="box-50 rounded-circle bg-light">
-                                        <img src="{{asset('admin/images/avatar/avatar1.jpg')}}" class="rounded-circle img-fit">
+                                        @if(profile_picture_check(Auth()->user()->id) === 'yes')
+                                            <img src="{{asset('profile/profile.jpg')}}" class="rounded-circle img-fit" alt="Avatar">
+
+                                        @else
+                                            @foreach(profile_picture()->where('user_id',Auth()->user()->id)->take(1) as $profile_image)
+                                                <img src="{{asset('profile/'.$profile_image->image)}}" class="rounded-circle img-fit" alt="Avatar">
+                                            @endforeach
+                                        @endif
                                     </div>
                                 </div>
                                 <div>

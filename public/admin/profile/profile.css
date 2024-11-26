@@ -159,7 +159,7 @@ ul.cover2buttons {
     line-height: 13px;
     padding: 32px 23px;
     position: absolute;
-    right: 1%;
+    right: 3%;
     bottom: 9%;
     border-radius: 10px;
     transition: 1s;
@@ -223,4 +223,70 @@ div#imageForProfile {
 }
 #wrapAllUploader::-webkit-scrollbar {
     display: none; /* স্ক্রল বার লুকানো */
+}
+@media(max-width: 600px)
+{
+    button#saveNewPosition {
+        font-size: 8px;
+    }
+}
+@media (max-width: 600px)
+{
+    button#cancel_reposition_button {
+        font-size: 8px;
+    }
+}
+@media (max-width: 600px)
+{
+    li#upload {
+        font-size: 8px;
+    }
+
+}
+@media (max-width: 600px)
+{
+    li#reposition {
+        font-size: 8px;
+    }
+
+}
+@media(max-width:1050px)
+{
+    ul#cover2buttons {
+        right: 2%;
+    }
+}
+@media(max-width:800px)
+{
+    ul#cover2buttons {
+        height: 120px;
+        padding-top: 14px;
+        width: 110px;
+        right: 3%;
+    }
+}
+@media(max-width:600px)
+{
+    ul#cover2buttons {
+        height: 94px;
+        padding-top: 10px;
+        width: 82px;
+        right: 3%;
+    }
+}
+@media (max-width: 550px) {
+    ul#cover2buttons {
+        height: 94px;
+        padding-top: 10px;
+        width: 82px;
+        right: 2%;
+    }
+}
+@media (max-width: 450px) {
+    ul#cover2buttons {
+        height: 94px;
+        padding-top: 10px;
+        width: 82px;
+        right: 1%;
+    }
 }

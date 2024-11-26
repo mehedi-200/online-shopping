@@ -46,13 +46,17 @@ function checkLike($product_id): string
 function profile_picture()
 {
     return Profile::orderBy('id','desc')->get();
-
-//    if(!Profile::where('user_id',$user_id)->exists()){
-//        return 'profile.jpg';
-//    }
-//    else{
-//        return Profile::where('user_id',$user_id)->select('image')->latest()->first();
-//
-//    }
 }
+function profile_picture_check($user_id): string
+{
+  if(!Profile::where('user_id',$user_id)->exists()){
+      return 'yes';
+  }
+  else {
+      return 'no';
+  }
+}
+
+
+
 ?>

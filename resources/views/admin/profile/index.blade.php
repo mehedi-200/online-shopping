@@ -21,8 +21,8 @@
 
                            @endif
                            <div class="position-absolute float-md-end bottom-0" style='display:none;z-index: 100' id="reposition_save_cancel">
-                               <button class="btn-success btn " id="saveNewPosition">Save Changes</button>
-                               <button class="btn-danger btn " id="cancel_reposition_button">Cancel</button>
+                               <button class="btn-success btn btn-sm " id="saveNewPosition">Save Changes</button>
+                               <button class="btn-danger btn btn-sm" id="cancel_reposition_button">Cancel</button>
                            </div>
 
                            <form action="{{route('profile.cover',[Auth()->user()->id])}}" method="POST" enctype="multipart/form-data" id="form2Id">
@@ -137,44 +137,60 @@
         // Function to get the current top value
         function getCurrentTopValue() {
             let topValue = $('#coverImage').css('top'); // e.g., '50px'
-            let numericValue = Math.abs(parseInt(topValue)); // Convert to number and get absolute value
-            return numericValue; // Return the current top value as a number
+            return Math.abs(parseFloat(topValue)); // Convert to number and get absolute value
         }
 
         $(document).ready(function () {
-            var dragging = false;
-            var offsetY;
+            let dragging = false;
+            let offsetY;
+            const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth <= 768;
 
             $('#reposition').click(function () {
-                $('#reposition_save_cancel').css({
-                    'display': 'block',
-                });
+                $('#reposition_save_cancel').css('display', 'block');
                 alert('After clicking the reposition button, you have to press on this cover image to make changes');
 
-                $('#coverImage').on('mousedown', function (e) {
-                    dragging = true;
-                    offsetY = e.clientY - $(this).offset().top;
-                });
+                if (isMobile) {
+                    $('#coverImage').on('touchstart', function (e) {
+                        dragging = true;
+                        offsetY = e.touches[0].clientY - $(this).offset().top;
+                    });
 
-                $(document).on('mousemove', function (a) {
-                    if (dragging) {
-                        $('#coverImage').css({
-                            'top': (a.clientY - offsetY) + 'px'
-                        });
-                    }
-                });
+                    $('#coverImage').on('touchmove', function (e) {
+                        if (dragging) {
+                            e.preventDefault(); // Prevent scrolling
+                            $(this).css({
+                                'top': (e.touches[0].clientY - offsetY) + 'px'
+                            });
+                        }
+                    });
 
-                $(document).on('mouseup', function () {
-                    dragging = false;
-                    // Log the current top value after dragging
-                    let currentTop = getCurrentTopValue();
-                });
+                    $('#coverImage').on('touchend', function () {
+                        dragging = false;
+                        let currentTop = getCurrentTopValue();
+                    });
+                } else {
+                    $('#coverImage').on('mousedown', function (e) {
+                        dragging = true;
+                        offsetY = e.clientY - $(this).offset().top;
+                    });
+
+                    $(document).on('mousemove', function (e) {
+                        if (dragging) {
+                            $('#coverImage').css({
+                                'top': (e.clientY - offsetY) + 'px'
+                            });
+                        }
+                    });
+
+                    $(document).on('mouseup', function () {
+                        dragging = false;
+                        let currentTop = getCurrentTopValue();
+                    });
+                }
             });
-
         });
-
-
     </script>
+
     <script>
         $('#cancel_reposition_button').click(function (){
             $('#reposition_save_cancel').css({
@@ -282,11 +298,24 @@
         <script>
             $(document).ready(function (){
                 $('#saveNewPosition').click(function (){
+                    alert('you have to upload cover photo for changing the position')
                     location.reload();
                 });
             });
         </script>
 
     @endif
+    <script>
+        $(document).ready(function () {
+            const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth <= 768;
 
+            if (isMobile) {
+                console.log("This is a smartphone or tablet.");
+                // Code for smartphones or tablets
+            } else {
+                console.log("This is a PC.");
+                // Code for PCs
+            }
+        });
+    </script>
 @endsection
