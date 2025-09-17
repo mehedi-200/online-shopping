@@ -66,6 +66,8 @@
                         </div>
                     </form>
                 </div>
+                <a href="{{ route('google.login') }}" class="btn btn-primary">Login with Google</a>
+
             </div>
         </div>
     </div>

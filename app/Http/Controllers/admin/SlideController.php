@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Slide;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 use Toastr;
 
@@ -14,12 +15,20 @@ class SlideController extends Controller
 {
     public function index()
     {
+        if(!Auth::user()->can('manage_slide')){
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        };
         $data['activeMenu'] = 'slide';
         $data['slides']     = Slide::orderBy('id', 'desc')->get();
         return view('admin.setting.slide.index', $data);
     }
     public function create()
     {
+        if(!Auth::user()->can('manage_slide')){
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        };
         $data['activeMenu'] = 'slide';
         return view('admin.setting.slide.create', $data);
     }
@@ -45,8 +54,12 @@ class SlideController extends Controller
     }
     public function show($id)
     {
+        if(!Auth::user()->can('manage_slide')){
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        };
         $data['activeMenu'] = 'slide';
-        $data['slide']      = Slide::find($id);
+        $data['slide']      = Slide::findOrFail($id);
         return view('admin.setting.slide.edit', $data);
     }
     public function update(Request $request, $id)
@@ -73,7 +86,7 @@ class SlideController extends Controller
     }
     public function destroy($id)
     {
-        $slide = Slide::find($id);
+        $slide = Slide::findOrFail($id);
         Slide::where('id', $id)->delete();
         activity()->performedOn($slide)->log('User ' . Auth()->user()->name . ' has deleted '.$slide->id.' no' .'category '.'name'.'['.$slide->name.']');
         Toastr::error('The slider information has been deleted successfully', '', ['closeButton' => true, 'progressBar' => true]);

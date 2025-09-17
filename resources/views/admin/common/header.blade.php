@@ -1,7 +1,7 @@
 <div class="wrapping-nav" id="wrappingNav">
     <nav class="navbar navbar-expand nav-aside">
         <div class="px-3">
-            <a class="navbar-brand" href="#"><img src="{{asset('admin/images/logo/logo.png')}}" class="img-fluid" alt="Logo"></a>
+            <a class="navbar-brand" href="{{route('admin.dashboard')}}"><img src="{{asset('admin/images/logo/logo.png')}}" class="img-fluid" alt="Logo"></a>
         </div>
     </nav>
     <nav class="navbar navbar-expand nav-content">
@@ -13,7 +13,6 @@
             <div class="d-flex fs-5 fw-bold fw-bold ms-3  ">
                 <a href="{{url('/')}}" target="_blank"> > </a>
             </div>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -35,12 +34,21 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <span class="nav-icon-box">
-                            <i class="icon-envelope text-muted"></i>
-                            <span class="new-notify-count message-count">0</span>
+                    <div class="dropdown">
+                        <span class="nav-icon-box" data-bs-toggle="dropdown">
+                        <i class="fa-solid fa-language"></i>
                         </span>
-                    </a>
+                        <ul class="dropdown-menu">
+                            @foreach(get_language() as $language)
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center" href="{{route('language.switch',$language->iso_code)}}">
+                                        <img src="{{asset('language/'.$language->image)}}" alt="User 1" class="rounded-circle" width="24" height="24">
+                                        <span class="ms-2" >{{$language->language}}</span>
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#" data-bs-toggle="dropdown" class="nav-link">
@@ -92,14 +100,14 @@
                                     <span class="text-14">{{__('app.inbox')}}</span>
                                     <span class="ms-auto"><span class="new-notify-count message-count">5</span></span>
                                 </a>
-                                <a href="#" class="d-flex align-items-center dropdown-item">
+                                <a href="{{ route('chat.index') }}" class="d-flex align-items-center dropdown-item">
                                     <span class="me-3 text-info"><i class="icon-bubble"></i></span>
                                     <span class="text-14">{{__('app.chat')}}</span>
                                 </a>
 
                                 <div class="dropdown-divider"></div>
 
-                                <a href="{{route('logout')}}" class="d-flex align-items-center dropdown-item">
+                                <a href="javascript:void (0);" onclick="handleLogout()" class="d-flex align-items-center dropdown-item">
                                     <span class="me-3 text-info"><i class="icon-logout"></i></span>
                                     <span class="text-14">{{__('app.logout')}}</span>
                                 </a>

@@ -12,17 +12,27 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
 use Toastr;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
     public function index()
     {
+        if (!Auth::user()->can('manage_product')) {
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        } // end permission checking
+
         $data['activeMenu'] = 'product';
-        $data['products'] = Product::orderBy('id','desc')->get();
+        $data['products'] = Product::orderBy('id','desc')->paginate(5);
         return view('admin.product.index', $data);
     }
     public function create()
     {
+        if(!Auth::user()->can('manage_product')) {
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        };
         $data['activeMenu'] = 'product';
         $data['categories'] = Category::orderBy('id','desc')->get();
         return view('admin.product.create', $data);
@@ -69,9 +79,11 @@ class ProductController extends Controller
     }
     public function edit($id)
     {
-        if (!Product::where('id', $id)->exists()) {
-            abort(404);
-        }
+        if(!Auth::user()->can('manage_product')) {
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        } ;
+        Product::findOrFail($id);
         $data['activeMenu'] = 'product';
         $data['categories'] = Category::all();
         $data['products']   = Product::find($id);
@@ -127,10 +139,7 @@ class ProductController extends Controller
     }
     public function delete($id)
     {
-        if (!Product::where('id', $id)->exists()) {
-            abort(404);
-        }
-        $product = Product::find($id);
+        $product = Product::findOrFail($id);
         Product::where('id',$id)->delete();
         activity()->performedOn($product)->log('User ' . Auth()->user()->name . ' has deleted '.$product->id.' no ' .'product '.'name'.'['.$product->name.']');
         Toastr::error('The product information has been deleted successfully', '', ['closeButton' => true, 'progressBar' => true]);
@@ -152,4 +161,65 @@ class ProductController extends Controller
 
         return Subcategory::where('category_id', $id)->orderBy('id','desc')->get();
     }
+    public function csvDownload()
+    {
+       $product = Product::orderBy('id','desc')->get();
+       $callback = function () use ($product) {
+           $file = fopen('php://output','w');
+           fputcsv($file,['ID','Category','Sub Category','Product Title','Price']); //header of csv table;
+           for($i = 0; $i < count($product); $i++){
+               fputcsv($file,[
+                   $i + 1,
+                   $product[$i]->category->name,
+                   $product[$i]->subCategory->name,
+                   $product[$i]->title,
+                   $product[$i]->price
+               ]);
+           };
+           fclose($file);
+       };
+       return response()->stream($callback, 200, headers());
+    }
+//    public function csvDownload()
+//    {
+//        $headers = [
+//            'Content-Type' => 'text/csv',
+//            'Content-Disposition' => 'attachment; filename=products.csv',
+//            'Cache-Control' => 'must-revalidate, post-check=0, pre-check=0',
+//            'Pragma' => 'no-cache',
+//            'Expires' => '0'
+//        ];
+//
+//        $products = Product::with(['category', 'subCategory'])
+//            ->orderBy('id', 'desc')
+//            ->get();
+//
+//        $callback = function () use ($products) {
+//            $file = fopen('php://output', 'w');
+//
+//            // CSV Header
+//            fputcsv($file, ['ID', 'Category', 'Sub Category', 'Product Title', 'Price']);
+//
+//            foreach ($products as $index => $product) {
+//                fputcsv($file, [
+//                    $index + 1,
+//                    optional($product->category)->name,
+//                    optional($product->subCategory)->name,
+//                    $product->title,
+//                    $product->price
+//                ]);
+//
+//                // ✅ Flush output buffer after each line (or after few lines in real case)
+//                if (ob_get_level()) {
+//                    ob_flush(); // flush buffer
+//                }
+//                flush(); // send to browser
+//            }
+//
+//            fclose($file);
+//        };
+//
+//        return response()->stream($callback, 200, $headers);
+//    }
+
 }

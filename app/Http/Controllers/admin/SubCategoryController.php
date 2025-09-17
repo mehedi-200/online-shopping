@@ -8,6 +8,7 @@ use App\Models\SubCategory;
 use Illuminate\Console\View\Components\Warn;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Str;
 use Toastr;
@@ -16,12 +17,20 @@ class SubCategoryController extends Controller
 {
     public function index()
     {
+        if(!Auth::user()->can('manage_subcategory')) {
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        };
         $data['activeMenu'] = 'sub-category';
         $data['subCategories'] = SubCategory::orderBy('id', 'desc')->get();
         return view('admin.product.subCategory.index', $data);
     }
     public function create()
     {
+        if(!Auth::user()->can('manage_subcategory')) {
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        };
         $data['activeMenu'] = 'sub-category';
         $data['categories'] = Category::orderBy('id', 'desc')->get();
         return view('admin.product.subCategory.create', $data);
@@ -49,6 +58,10 @@ class SubCategoryController extends Controller
     }
     public function show($id)
     {
+        if(!Auth::user()->can('manage_subcategory')) {
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        };
         if (!SubCategory::where('id', $id)->exists()) {
             abort(404);
         }

@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('admin/icon/font-awesome/css/font-awesome.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('admin/icon/icofont/icofont.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('admin/icon/simpleline/css/simple-line-icons.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin/icon/icon-pe7/css/pe-icon-7-stroke.css')}}">
+{{--    <link rel="stylesheet" type="text/css" href="{{asset('admin/icon/icon-pe7/css/pe-icon-7-stroke.css')}}">--}}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap">
     <!-- Toastr CSS CDN -->
     <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
@@ -59,6 +59,11 @@
         </div>
     </div>
 </div>
+<input type="hidden" id="base_url" value="{{url('/')}}">
+
+
+
+
 
 <script type="text/javascript" src="{{asset('admin/js/jquery-3.6.0.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('admin/js/popper.min.js')}}"></script>
@@ -81,6 +86,6 @@
 </script>
 <!--============ Custom Main ================-->
 <script type="text/javascript" src="{{asset('admin/js/main.js')}}"></script>
-
+@include('common.activeOrInactiveAsset')
 </body>
 </html>

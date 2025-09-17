@@ -167,12 +167,7 @@
                            <span class="fs-3 text-success me-1 "><i class="fa-solid fa-money-check-dollar"></i></span> <span class="fs-4 text-brand-secondary">{{__('app.select').' '.__('app.payment').' '.__('app.method')}}</span>
                         </div>
                         <hr>
-                        @if (session('select_payment'))
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                {{ session('select_payment') }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
-                        @endif
+
                         <div class="col-sm-6 mb-3">
                             <input type="radio" name="payment" id="cod" value="cod">
                             <label class="text-bold" for="cod"> {{__('app.COD')}}</label>
@@ -194,6 +189,7 @@
                     <i class="fas fa-spinner fa-spin loading-icon"></i>
                 </div>
             </div>
+
         </div>
 
     </div>
@@ -209,7 +205,7 @@
         $(document).on('submit','#submit_form',function (){
             $('.spinner').css({
                 'display':'block',
-            })
+            });
         });
     </script>
 @endsection

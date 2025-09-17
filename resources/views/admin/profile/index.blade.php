@@ -3,6 +3,10 @@
 
 @section('css')
     <link rel="stylesheet" href="{{asset('admin/profile/profile.css')}}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add Cropper.js CSS and JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" />
+
 @endsection
 
 
@@ -15,9 +19,9 @@
 
 
                            @if($cover)
-                               <img src="{{asset('profile/'.$cover->image)}}"  id="coverImage" alt="" style="top:-{{$cover->top_position}}px;">
+                               <img src="{{asset('profile/'.$cover->image)}}" data-coverid="{{$cover->id}}"  id="coverImage" alt="" style="top:-{{$cover->top_position}}px;">
                            @else
-                               <img src="{{asset('profile/cover.jpg')}}" id="coverImage" style="top:-40px;" alt="">
+                               <img src="{{asset('profile/cover.jpg')}}" data-coverid="{{$cover ? $cover->id:''}}" id="coverImage" style="top:-40px;" alt="">
 
                            @endif
                            <div class="position-absolute float-md-end bottom-0" style='display:none;z-index: 100' id="reposition_save_cancel">
@@ -44,9 +48,17 @@
                            @endif
                            <form action="{{route('profile.picture',[Auth()->user()->id])}}" method="POST" enctype="multipart/form-data" id="formId">
                                @csrf
-                               <input type="file" name="profile" id="profileInput" style="display: none;">
+                               <input type="file" name="profile" id="keep_profile_value"  style="display: none;">
+
                            </form>
-                           <button id="profileButton"><i class="fas fa-camera"></i></button>
+                               <button id="profileButton"><i class="fas fa-camera"></i></button>
+                               <input type="file" id="profileInput" name="profile_lost" style="display: none;">
+
+                       </div>
+                       <div class="w-50 position-absolute center text-success fs-3"  id="resize_profile_image" style=";display:none;z-index:2;">
+                           <img  id="profile_image_preview" width="100%" alt="">
+                           <button class="btn btn-sm btn-success  position-absolute bottom-0 w-50 left" id="submit_resize_profile_image">Submit</button>
+                           <button class="btn btn-sm btn-danger  position-absolute bottom-0  w-50 right" id="resize_profile_image_d_none_btn">cancel</button>
                        </div>
                    </div>
                </div>
@@ -104,218 +116,143 @@
                 </div>
             </div>
         </div>
+       <input type="hidden" value="{{Auth()->user()->id}}" id="authUserIdForCoverImage">
 
 
 @endsection
 @section('js')
-    <!--javascript work below the comment-->
+    <!--javascript work below for this page-->
+    <script src="{{asset('admin/js/common.js')}}"></script>
+    <!--javascript work below for this page-->
+
+
+    <!-- jQuery -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Cropper.js -->
+    <!-- jQuery -->    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+
+
 
     <script>
-        document.querySelector('#profileButton').addEventListener('click',function(){
-            document.getElementById('profileInput').click();
-        });
-        document.querySelector('#upload').addEventListener('click',function(){
-            document.getElementById('coverInput').click();
-        })
-        $(document).ready(function(){
-            $('#coverButton').click(function(){
-                $('.cover2buttons').toggleClass('cover3buttons')
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function(){
-            $('#upBtn1').click(function(){
-                $('#coverInput').click();
-                $('.cover2buttons').removeClass('cover3buttons');
-            })
-        })
-
-    </script>
-
-    <script>
-        // Function to get the current top value
-        function getCurrentTopValue() {
-            let topValue = $('#coverImage').css('top'); // e.g., '50px'
-            return Math.abs(parseFloat(topValue)); // Convert to number and get absolute value
-        }
-
         $(document).ready(function () {
-            let dragging = false;
-            let offsetY;
-            const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth <= 768;
+            let cropper;
 
-            $('#reposition').click(function () {
-                $('#reposition_save_cancel').css('display', 'block');
-                alert('After clicking the reposition button, you have to press on this cover image to make changes');
+            // When the user selects a file
+            $(document).on("change", "#profileInput", function (e) {
+                let files = e.target.files[0];
+                if (files) {
+                    const reader = new FileReader();
+                    reader.onload = function (a) {
+                        // Show the image preview
+                        $('#profile_image_preview').attr('src', a.target.result);
+                        $('#resize_profile_image').css({
+                            'display':'block',
+                        });
+                        // Destroy any previous cropper instance
+                        if (cropper) cropper.destroy();
+                        {
+                            cropper = new Cropper($('#profile_image_preview')[0], {
+                                aspectRatio: 1, // Square cropping
+                                viewMode: 1,    // Restrict crop box to within the image
 
-                if (isMobile) {
-                    $('#coverImage').on('touchstart', function (e) {
-                        dragging = true;
-                        offsetY = e.touches[0].clientY - $(this).offset().top;
-                    });
 
-                    $('#coverImage').on('touchmove', function (e) {
-                        if (dragging) {
-                            e.preventDefault(); // Prevent scrolling
-                            $(this).css({
-                                'top': (e.touches[0].clientY - offsetY) + 'px'
-                            });
+                        });
                         }
-                    });
 
-                    $('#coverImage').on('touchend', function () {
-                        dragging = false;
-                        let currentTop = getCurrentTopValue();
-                    });
-                } else {
-                    $('#coverImage').on('mousedown', function (e) {
-                        dragging = true;
-                        offsetY = e.clientY - $(this).offset().top;
-                    });
+                    };
+                    reader.readAsDataURL(files);
+                }
+            });
+            $('#submit_resize_profile_image').click(function () {
+                if (cropper) {
+                    // ক্রপ করা ইমেজের ডেটা তৈরি
+                    const croppedCanvas = cropper.getCroppedCanvas();
+                    const croppedImageData = croppedCanvas.toDataURL('image/png'); // Base64 format
 
-                    $(document).on('mousemove', function (e) {
-                        if (dragging) {
-                            $('#coverImage').css({
-                                'top': (e.clientY - offsetY) + 'px'
-                            });
+                    // AJAX অনুরোধ ব্যবহার করে POST মেথডে ডেটা পাঠানো
+                    let base_url = '{{url("/")}}';
+                    let id = "{{Auth()->user()->id}}";
+
+                    $.ajax({
+                        type: 'POST', // POST মেথড ব্যবহার করা হচ্ছে
+                        url: base_url + '/admin/profile/index/check-data-ajax',
+                        data: {
+                            id: id, // ইউজার আইডি পাঠানো হচ্ছে
+                            image: croppedImageData // ইমেজের ডেটা পাঠানো হচ্ছে
+                        },
+                        headers: {
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}' // CSRF টোকেন সিকিউরিটির জন্য
+                        },
+                        success: function (response) {
+                            console.log("Image successfully uploaded");
+                            location.reload();
+                            alert('ইমেজ সফলভাবে আপলোড হয়েছে');
+                        },
+                        error: function () {
+                            alert('ইমেজ আপলোড ব্যর্থ হয়েছে');
                         }
-                    });
-
-                    $(document).on('mouseup', function () {
-                        dragging = false;
-                        let currentTop = getCurrentTopValue();
                     });
                 }
             });
+
         });
     </script>
+
+                // "formId" this id is appear to the form that you want to submit. You can change the name of ID
+
+{{--    <script>--}}
+{{--        $(document).on("change", "#formId", function (e) {--}}
+
+{{--            e.preventDefault();--}}
+{{--            var form = $(this);--}}
+{{--            var url = form.attr('action');--}}
+{{--            const formData = new FormData(form[0]);--}}
+
+{{--            $.ajax({--}}
+{{--                type: "POST",--}}
+{{--                url: url,--}}
+{{--                data: formData,--}}
+{{--                success: function (info) {--}}
+{{--                    console.log("Form successfully submitted");--}}
+{{--                    // please add code here when form successfully summitted.--}}
+{{--                    location.reload();--}}
+{{--                },--}}
+{{--                cache: false,--}}
+{{--                contentType: false,--}}
+{{--                processData: false--}}
+{{--            });--}}
+{{--        });--}}
+{{--    </script>--}}
+
+{{--    </script>--}}
+    <script>
+
+    </script>
+
+{{--    <script>--}}
+{{--        $(document).ready(function () {--}}
+{{--            const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth <= 768;--}}
+
+{{--            if (isMobile) {--}}
+{{--                console.log("This is a smartphone or tablet.");--}}
+{{--                // Code for smartphones or tablets--}}
+{{--            } else {--}}
+{{--                console.log("This is a PC.");--}}
+{{--                // Code for PCs--}}
+{{--            }--}}
+{{--        });--}}
+{{--    </script>--}}
 
     <script>
-        $('#cancel_reposition_button').click(function (){
-            $('#reposition_save_cancel').css({
-                'display':'none',
-            });
-
-        });
 
     </script>
-    <script>
-        $('#seeAll').click(function (){
-            $(this).css({
-                'display':'none',
-            });
-            $('#closeAll').css({
-                'display':'block',
-            });
-            $('#seeAll_photos_block').css({
-                'height':'auto',
-            })
-        });
-        $('#closeAll').click(function (){
-            $(this).css({
-                'display':'none',
-            });
-            $('#seeAll').css({
-                'display':'block',
-            });
-            $('#seeAll_photos_block').css({
-                'height':'430px',
-            })
-        });
-    </script>
-    <script>
-        // "formId" this id is appear to the form that you want to submit. You can change the name of ID
-        $(document).on("change", "#formId", function (e) {
-            e.preventDefault();
-            var form = $(this);
-            var url = form.attr('action');
-            const formData = new FormData(form[0]);
-
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: formData,
-                success: function (info) {
-                    console.log("Form successfully submitted");
-                    // please add code here when form successfully summitted.
-                    location.reload();
-                },
-                cache: false,
-                contentType: false,
-                processData: false
-            });
-        });
-
-    </script>
-    <script>
-        $(document).on("change", "#form2Id", function (e) {
-            e.preventDefault();
-            var form = $(this);
-            var url = form.attr('action');
-            const formData = new FormData(form[0]);
-
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: formData,
-                success: function (info) {
-                    console.log("Form successfully submitted");
-                    // please add code here when form successfully summitted.
-                    location.reload();
-                },
-                cache: false,
-                contentType: false,
-                processData: false
-            });
-        });
-    </script>
-    @if($cover)
-        <script>
-            $(document).ready(function (){
-                var id = {{Auth()->user()->id}};
-                var image_id = {{$cover->id}} ;
-                var base_url = "{{url('/')}}";
-
-                $('#saveNewPosition').click(function (){
-                    let topValue = getCurrentTopValue();
-                    $.ajax({
-                        type:'GET',
-                        url:base_url+'/admin/profile/cover-reposition/'+id+'/'+image_id+'/'+topValue,
-                        success:function (){
-                            location.reload();
-                        },
-                        error:function (){
-                            alert('error');
-                        }
-                    })
-                });
 
 
-            });
-        </script>
-    @else
-        <script>
-            $(document).ready(function (){
-                $('#saveNewPosition').click(function (){
-                    alert('you have to upload cover photo for changing the position')
-                    location.reload();
-                });
-            });
-        </script>
-
-    @endif
-    <script>
-        $(document).ready(function () {
-            const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth <= 768;
-
-            if (isMobile) {
-                console.log("This is a smartphone or tablet.");
-                // Code for smartphones or tablets
-            } else {
-                console.log("This is a PC.");
-                // Code for PCs
-            }
-        });
-    </script>
 @endsection

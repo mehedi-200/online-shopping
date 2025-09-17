@@ -239,7 +239,7 @@ class FrontProductController extends Controller
         $order->payment_type = $request->payment;
         $order->save();
 
-//        }
+
         $addToCart = AddToCart::has('product')->where('user_ip',$request->ip())->get();
         foreach($addToCart as $card)
         {

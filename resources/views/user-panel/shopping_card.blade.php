@@ -45,10 +45,6 @@
                                 <a href="#" class="product-title d-block two-line-text">{{$cart->product->name}} </a>
                                 <small class="d-block text-muted">{{__('app.id')}}: #{{$cart->product->id * $cart->product->id * $cart->product->id}}</small>
                                 <small class="d-block text-muted" ><div id="two_line_details_for_shopping_card_page">{{$cart->product->details}}</div></small>
-
-
-
-
                             </td>
                             <td><span>In stock</span></td>
                             <td><span id="unit_total" class="unit-total{{$cart->id}}">${{number_format($cart->unit_price,2)}}</span></td>

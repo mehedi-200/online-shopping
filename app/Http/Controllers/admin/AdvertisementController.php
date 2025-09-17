@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Advertisement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 use Toastr;
 
@@ -13,12 +14,22 @@ class AdvertisementController extends Controller
 {
     public function index()
     {
+        if(!Auth::user()->can('manage_advertisement'))
+        {
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        };
         $data['activeMenu'] = 'advertisement';
         $data['advertisements'] = Advertisement::all();
         return view('admin.setting.advertisement.index', $data);
     }
     public function create()
     {
+        if(!Auth::user()->can('manage_advertisement'))
+        {
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        };
         $data['activeMenu'] = 'advertisement';
         return view('admin.setting.advertisement.create', $data);
     }
@@ -40,6 +51,12 @@ class AdvertisementController extends Controller
     }
     public function edit(Request $request, $id)
     {
+        if(!Auth::user()->can('manage_advertisement'))
+        {
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        };
+        Advertisement::findOrFail($id);
         $data['activeMenu'] = 'advertisement';
         $data['add']        = Advertisement::find($id);
         return view('admin.setting.advertisement.edit', $data);
@@ -63,7 +80,8 @@ class AdvertisementController extends Controller
     }
     public function delete($id)
     {
-        $add = Advertisement::find($id);
+
+        $add = Advertisement::findOrFail($id);
         Advertisement::where('id',$id)->delete();
         activity()->performedOn($add)->log('User ' . Auth()->user()->name . ' has deleted '.$add->id.' no ' .'advertisement '.'name'.'['.$add->name.']');
         Toastr::error('The Advertisement information has been deleted successfully', '', ['closeButton' => true, 'progressBar' => true]);

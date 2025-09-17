@@ -13,7 +13,7 @@
             <div class="col-md-6 d-flex">
                 <div class="info-card flex-fill">
                     <div class="card-header">{{__('app.customer').' '.__('app.information')}}</div>
-                    <div class="card-body">
+                    <div class="card-body text-black">
                         <p><strong>{{__('app.name')}}:</strong> {{$order->customer->user ? $order->customer->user->name:''}}</p>
                         <p><strong>{{__('app.address')}}:</strong> {{$order->customer->address}}</p>
                         <p><strong>{{__('app.phone')}}:</strong> 0{{$order->customer->user ? $order->customer->user->phone:''}}</p>
@@ -24,7 +24,7 @@
             <div class="col-md-6 d-flex">
                 <div class="info-card flex-fill">
                     <div class="card-header">{{__('app.order').' '.__('app.information')}}</div>
-                    <div class="card-body">
+                    <div class="card-body text-black">
                         <p><strong>{{__('app.order').' '.__('app.date')}}:</strong> {{$order->created_at->format('d/m/y')}}</p>
                         <p><strong>{{__('app.order').' '.__('app.id')}}:</strong> {{$order->id}}</p>
                         <p><strong>{{__('app.status')}}:</strong> <span class=" p-1 @if($order->status =='pending' || $order->status =='processing') alert alert-primary @endif @if($order->status =='completed') alert alert-success @endif @if($order->status == 'cancelled') alert alert-danger  @endif">{{$order->status}}</span></p>

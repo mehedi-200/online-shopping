@@ -22,7 +22,7 @@
                                     <td>{{$active->name}}</td>
                                     <td>{{$active->email}}</td>
                                     <td class="text-center">
-                                        <a href="{{route('user.view',[$active->id])}}" class="btn btn-success btn-sm">{{__('app.view')}}</a>
+                                        <a href="{{route('activity.view',[$active->id])}}" class="btn btn-success btn-sm">{{__('app.view')}}</a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -61,7 +61,9 @@
     <script type="text/javascript" src="{{asset('admin/plugin/datatable/js/dataTables.bootstrap5.min.js')}}"></script>
     <script>
         $(document).ready(function() {
-            $('#dataTable').DataTable();
+            $('#dataTable').DataTable({
+                'order':[[0,'desc']]
+            });
         });
     </script>
 @endsection

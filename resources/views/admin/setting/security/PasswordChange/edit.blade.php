@@ -16,15 +16,20 @@
             @csrf
             <div class="mb-3">
                 <label for="currentPassword" class="form-label">{{__('app.current').' '.__('app.password')}} </label>
-                <input type="password" class="form-control" id="currentPassword" minlength="8" placeholder="{{__('app.enter').' '.__('app.current').' '.__('app.password')}}" required>
+                <input type="password" class="form-control" name="oldPassword" id="currentPassword" minlength="8" value="{{old('oldPassword')}}" placeholder="{{__('app.enter').' '.__('app.current').' '.__('app.password')}}" required>
             </div>
             <div class="mb-3">
                 <label for="newPassword" class="form-label">{{__('app.new').' '.__('app.password')}} </label>
-                <input type="password" name="newPassword" class="form-control" id="newPassword" placeholder="{{__('app.enter').' '.__('app.new').' '.__('app.password')}}" minlength="8"  required>
+                <input type="password" name="newPassword" value="{{old('newPassword')}}" class="form-control" id="newPassword" placeholder="{{__('app.enter').' '.__('app.new').' '.__('app.password')}}" minlength="8"  required>
             </div>
             <div class="mb-3">
-                <label for="confirmPassword" class="form-label">{{__('app.confirm').' '.__('app.password')}} d</label>
-                <input type="password" name="confirmPassword" class="form-control" id="confirmPassword" placeholder="{{__('app.enter').' '.__('app.confirm').' '.__('app.password')}}" minlength="8" required>
+                <label for="confirmPassword" class="form-label">{{__('app.confirm').' '.__('app.password')}} </label>
+                <input type="password" name="confirmPassword" value="{{old('confirmPassword')}}" class="form-control" id="confirmPassword" placeholder="{{__('app.enter').' '.__('app.confirm').' '.__('app.password')}}" minlength="8" required>
+            </div>
+            <div class="mb-3">
+                <label for="showPasswords" class="form-label ">See Passwords</label>
+                <br>
+                <input type="checkbox" name="" id="showPasswords">
             </div>
             @if (session('error'))
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -35,6 +40,24 @@
             <button type="submit" class="btn btn-primary">{{__('app.update').' '.__('app.password')}}</button>
         </form>
     </div>
+@endsection
+@section('js')
+    <script>
+        $(document).on('click','#showPasswords',function (){
+            if($('#currentPassword').prop('type') === 'password')
+            {
+                $('#currentPassword').prop('type','text');
+                $('#newPassword').prop('type','text');
+                $('#confirmPassword').prop('type','text');
+            } else {
+                $('#currentPassword').prop('type','password');
+                $('#newPassword').prop('type','password');
+                $('#confirmPassword').prop('type','password');
+            }
+
+        });
+    </script>
+
 @endsection
 
 

@@ -9,11 +9,18 @@ use Illuminate\Support\Arr;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Str;
 use Toastr;
+use Illuminate\Support\Facades\Auth;
+use Barryvdh\DomPDF\Facade\Pdf;
+
 
 class CategoryController extends Controller
 {
     public function index()
     {
+        if(!Auth::user()->can('manage_category')){
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        };
         $data['activeMenu'] = 'category';
         $data['categories'] = Category::orderBy('id', 'desc')->get();
         $data['display']   = Category::where('display','yes')->orderBy('id', 'desc')->get();
@@ -21,6 +28,10 @@ class CategoryController extends Controller
     }
     public function create()
     {
+        if(!Auth::user()->can('manage_category')){
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        };
         $data['activeMenu'] = 'category';
         return view('admin.product.category.create', $data);
     }
@@ -53,6 +64,10 @@ class CategoryController extends Controller
     }
     public function edit($id)
     {
+        if(!Auth::user()->can('manage_category')){
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        };
         if(!Category::where('id',$id)->exists()){
              abort(404);
         }
@@ -105,5 +120,14 @@ class CategoryController extends Controller
         return redirect()->back();
 
     }
+
+
+    public function invoice()
+    {
+        $pdf =  PDF::loadView('admin.invoice',['name'=>'mehedi hasan','game'=>'FOOTBALL'])->setPaper('a4','portrait');
+        return $pdf->stream('mehedi.pdf');
+    }
+
+
 
 }

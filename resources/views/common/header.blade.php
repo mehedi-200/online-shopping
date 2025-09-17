@@ -1,5 +1,4 @@
 <nav class="navbar navbar-expand-lg topbar">
-
     <div class="container">
         <button type="button" class="navbar-toggler text-muted text-14" data-toggle="collapse" data-target="#topLeftHeader"><i class="fa fa-ellipsis-v"></i></button>
         <div class="collapse navbar-collapse" id="topLeftHeader">
@@ -80,7 +79,7 @@
 <!-- ================== Header ======================= -->
 <nav class="navbar navbar-expand-lg header">
     <div class="container position-relative py-3">
-        <a class="navbar-brand" href="#"><img src="{{asset('frontend/images/logo.png')}}" class="img-fluid d-block"></a>
+        <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('frontend/images/logo.png')}}" class="img-fluid d-block"></a>
         <div class="primary-search-box">
             <form class="my-2 my-lg-0">
                 <div class="input-group">

@@ -75,12 +75,14 @@
 
 @section('js')
     <script type="text/javascript" src="{{asset('admin/plugin/nicescroll/jquery.nicescroll.js')}}"></script>
-    <!--============== Extra Plugin ===================-->
+{{--    <!--============== Extra Plugin ===================-->--}}
     <script type="text/javascript" src="{{asset('admin/plugin/datatable/js/jquery.dataTables.js')}}"></script>
     <script type="text/javascript" src="{{asset('admin/plugin/datatable/js/dataTables.bootstrap5.min.js')}}"></script>
     <script>
         $(document).ready(function() {
-            $('#dataTable').DataTable();
+            $('#dataTable').DataTable({
+                'order':[[0,'desc']]
+            });
         });
     </script>
 @endsection

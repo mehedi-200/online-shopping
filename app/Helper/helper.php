@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\LikesCount;
 use App\Models\Profile;
 use App\Models\User;
+use App\Models\Language;
 
 
 function category()
@@ -55,6 +56,21 @@ function profile_picture_check($user_id): string
   else {
       return 'no';
   }
+}
+function get_language()
+{
+    return Language::orderBy('id','desc')->get();
+}
+function headers()
+{
+
+   return $headers = [
+        'Content-Type' => 'text/csv',
+        'Content-Disposition' => 'attachment; filename=mehedi.csv',
+        'Cache-Control' => 'must-revalidate, post-check=0, pre-check=0',
+        'Pragma' => 'no-cache',
+        'Expires' => '0'
+    ];
 }
 
 

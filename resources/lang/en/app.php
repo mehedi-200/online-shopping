@@ -2,6 +2,7 @@
 return [
     'welcome' => 'Welcome to our application!',
     'login' => 'Login',
+    'invoice' => 'Invoice',
     'dashboard' => 'Dashboard',
     'setting' => 'Setting',
     'product' => 'Products',
@@ -106,8 +107,8 @@ return [
     'pwd_change_title' => 'Reset your password for mo-re security.',
     'order' => 'Order',
     'pending' => 'Pending',
-    'completed' => 'completed',
-    'cancelled' => 'cancelled',
+    'completed' => 'Completed',
+    'cancelled' => 'Cancelled',
     'id'       => 'ID',
     'filters'       => 'Filters',
     'types'       => 'Types',
@@ -152,6 +153,27 @@ return [
     'COD' => 'Cash On Delivery',
     'paypal' => 'PayPal',
     'method' => 'Method',
+    'role'=>'Roles',
+    'permission'=>'Permission',
+    'log'=>'Log',
+    'super'=>'Super',
+    'admin'=>'Admin',
+    'branch'=>'Branch',
+    'manager'=>'Manager',
+    'sell'=>'Sell',
+    'executive'=>'Executive',
+    'man'=>'man',
+    'save'=>'Save',
+    'language'=>'Language',
+    'iso_code' => 'ISO Code',
+    'find' => 'Find',
+    'country_flag' => 'Country Flag',
+    'flag' => 'Flag',
+    'content' => 'Content',
+    'translate' => 'Translate',
+
+
+
 
 
 
@@ -164,4 +186,6 @@ return [
 
 
 ];
+ ?>
+
 

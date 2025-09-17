@@ -7,6 +7,7 @@ use App\Models\CoverPicture;
 use App\Models\Profile;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Intervention\Image\Facades\Image;
 use Toastr;
 use Illuminate\Support\Facades\DB;
@@ -23,10 +24,10 @@ public function index($id)
     $data['cover'] = CoverPicture::where('user_id',$id)->latest()->first();
     return view('admin.profile.index',$data);
 }
-public function profilePicture(Request $request,$id)
+public function profilePicture(Request $request)
 {
-    $data['activeMenu'] = 'profile';
-    $user = User::find($id);
+//    $keepImage = Arr::except($request->all(),['_token','profile_lost']);
+    $user = User::find($request->id);
     $file = new Profile;
     if(!file_exists(public_path('profile'))){
         mkdir(public_path('profile'), 0755, true);
@@ -88,6 +89,23 @@ public function profilePicture(Request $request,$id)
 
     }
 
+//    public function ajaxCheck(Request $request)
+//    {
+//        $userId = $request->input('id');
+//        $imageData = $request->input('image');
+//        dd($request->all());
+//
+//
+//        // ইমেজ ডেটা থেকে ফাইল তৈরি
+//        $image = str_replace('data:image/png;base64,', '', $imageData);
+//        $image = str_replace(' ', '+', $image);
+//        $imageName = 'profile_' . $userId . '.png';
+//
+//        // ইমেজ ফাইল সংরক্ষণ
+//        \File::put(public_path('uploads/profile_images/' . $imageName), base64_decode($image));
+//
+//        return response()->json(['success' => 'Image uploaded successfully']);
+//    }
 
 
 

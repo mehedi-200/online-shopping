@@ -6,12 +6,17 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "barryvdh/laravel-dompdf": "^3.0",
         "brian2694/laravel-toastr": "^5.59",
         "intervention/image": "^2",
         "laravel/framework": "^11.9",
+        "laravel/reverb": "^1.0",
+        "laravel/socialite": "^5.16",
         "laravel/tinker": "^2.9",
         "laravel/ui": "^4.5",
+        "pusher/pusher-php-server": "^7.2",
         "spatie/laravel-activitylog": "^4.8",
+        "spatie/laravel-permission": "^6.10",
         "srmklive/paypal": "^3.0"
     },
     "require-dev": {

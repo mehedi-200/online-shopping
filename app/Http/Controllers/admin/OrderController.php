@@ -5,11 +5,18 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\Orders;
 use Toastr;
+use Illuminate\Support\Facades\Auth;
 class OrderController extends Controller
 {
 
     public function pending()
     {
+        if(!Auth::user()->can('pending_order'))
+        {
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        };
+
         $data['activeMenu'] = "pending";
         $data['orders'] = Orders::has('customer')->where('status', 'pending')->orderBy('id', 'DESC')->get();
         activity()->log(auth()->user()->name.' visited pending orders list');
@@ -17,6 +24,11 @@ class OrderController extends Controller
     }
     public function processing()
     {
+        if(!Auth::user()->can('processing_order'))
+        {
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        };
         $data['activeMenu'] = "processing";
         $data['orders'] = Orders::has('customer')->where('status', 'processing')->orderBy('id', 'DESC')->get();
         activity()->log(auth()->user()->name.' visited processing orders list');
@@ -25,6 +37,11 @@ class OrderController extends Controller
     }
     public function completed()
     {
+        if(!Auth::user()->can('completed_order'))
+        {
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        };
         $data['activeMenu'] = "completed";
         $data['orders'] = Orders::has('customer')->where('status', 'completed')->orderBy('id', 'DESC')->get();
         activity()->log(auth()->user()->name.' visited completed orders list');
@@ -32,6 +49,11 @@ class OrderController extends Controller
     }
     public function cancelled()
     {
+        if(!Auth::user()->can('cancelled_order'))
+        {
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        };
         $data['activeMenu'] = "cancelled";
         $data['orders'] = Orders::where('status', 'cancelled')->orderBy('id', 'DESC')->get();
         activity()->log(auth()->user()->name.' visited cancelled orders list');
@@ -39,6 +61,11 @@ class OrderController extends Controller
     }
     public function view($id)
     {
+        if(!Auth::user()->can('pending_order'))
+        {
+            Toastr::warning('Access denied.', '', ['closeButton' => true, 'progressBar' => true]);
+            return redirect(route('admin.dashboard'));
+        };
         if (!Orders::where('id', $id)->exists()) {
             abort(404);
         }
@@ -59,7 +86,7 @@ class OrderController extends Controller
     public function cancelOrCompleted($id,$status)
     {
         $old = Orders::where('id', $id)->first();
-        $order = Orders::find($id);
+        $order = Orders::findOrFail($id);
         $order->status = $status;
         $order->save();
         activity()->performedOn($order)->log(auth()->user()->name.' change this '.$id.' no status '.$old->status.'  to '.$status);
@@ -68,7 +95,7 @@ class OrderController extends Controller
     }
     public function cancelOrder($id)
     {
-        $order = Orders::find($id);
+        $order = Orders::findOrFail($id);
         $order->status = 'cancelled';
         $order->save();
         activity()->performedOn($order)->log(auth()->user()->name.' cancelled this '.$id.'no : ordered');
@@ -80,8 +107,8 @@ class OrderController extends Controller
         if (!Orders::where('id', $id)->exists()) {
             abort(404);
         }
-        $old_id = Orders::find($id);
-       $order = Orders::where('id', $id)->delete();
+        $old_id = Orders::findOrFail($id);
+        $order = Orders::where('id', $id)->delete();
         activity()->performedOn($old_id)->log(auth()->user()->name.' cancelled this '.$id.' ordered');
         Toastr::error('The ordered  has been deleted successfully', '', ['closeButton' => true, 'progressBar' => true]);
         return redirect()->back();

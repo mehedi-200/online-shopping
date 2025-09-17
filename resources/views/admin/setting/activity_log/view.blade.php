@@ -34,7 +34,7 @@
                         @foreach($activity as $active)
                         <tr>
                             <td>{{$active->created_at->format('d/m/y')}}</td>
-                            <td>{{$active->created_at->format('H:i:s')}}</td>
+                            <td>{{$active->created_at->format('h:i:s')}}</td>
                             <td>{{$active->description}}</td>
 
                         </tr>
@@ -59,7 +59,9 @@
     <script type="text/javascript" src="{{asset('admin/plugin/datatable/js/dataTables.bootstrap5.min.js')}}"></script>
     <script>
         $(document).ready(function() {
-            $('#dataTable').DataTable();
+            $('#dataTable').DataTable({
+                'order':[[0,'desc']]
+            });
         });
     </script>
 @endsection

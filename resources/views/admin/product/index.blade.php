@@ -9,6 +9,7 @@
         <div class="theme-card">
             <div class="theme-card-header d-flex justify-content-between">
                 <h6 class="theme-card-title">{{__('app.product')}}</h6>
+                <a href="{{route('product.csvDownload')}}" class="btn btn-secondary btn-sm">CSV</a>
                 <a href="{{route('product.create')}}" class="btn btn-success btn-sm">{{__('app.add')}}</a>
             </div>
             <div class="theme-card-body">
@@ -44,6 +45,7 @@
                         </tbody>
                     </table>
                 </div>
+                {{$products->links()}}
             </div>
         </div>
 
@@ -61,7 +63,9 @@
     <script type="text/javascript" src="{{asset('admin/plugin/datatable/js/dataTables.bootstrap5.min.js')}}"></script>
     <script>
         $(document).ready(function() {
-            $('#dataTable').DataTable();
+            $('#dataTable').DataTable({
+                'order':[[0,'desc']]
+            });
         });
     </script>
 @endsection
