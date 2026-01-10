@@ -174,6 +174,9 @@
                             <br>
                             <input type="radio" name="payment" id="paypal"  value="paypal">
                             <label class="text-bold" for="paypal"> {{__('app.paypal')}}</label>
+                            <br>
+                            <input type="radio" name="payment" id="bkash"  value="bkash">
+                            <label class="text-bold" for="bkash">Bkash</label>
 
                         </div>
                         <div class="col-sm-6 mb-3">

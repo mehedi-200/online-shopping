@@ -17,11 +17,27 @@ use http\Env\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Testing\Fluent\Concerns\Has;
 
 
 class FrontProductController extends Controller
 {
+    private $base_url;
+    private $app_key;
+    private $app_secret;
+    private $username;
+    private $password;
+
+    public function __construct()
+    {
+        $this->base_url = config('bkash.base_url');
+        $this->app_key = config('bkash.app_key');
+        $this->app_secret = config('bkash.app_secret');
+        $this->username = config('bkash.username');
+        $this->password = config('bkash.password');
+    }
+
     public function productDetails($slug)
     {
         $data['product'] = Product::where('slug', $slug)->orderBy('id','desc')->first();
@@ -199,6 +215,18 @@ class FrontProductController extends Controller
         $data['page_details'] = 'Checkout';
         return view('user-panel.checkout', $data);
     }
+    public function getToken()
+    {
+        $response = Http::withHeaders([
+            'username' => $this->username,
+            'password' => $this->password,
+        ])->post($this->base_url . '/tokenized/checkout/token/grant', [
+            'app_key' => $this->app_key,
+            'app_secret' => $this->app_secret,
+        ]);
+
+        return $response->json();
+    }
     public function placeOrder(Request $request)
     {
         if(!$request->payment)
@@ -223,46 +251,76 @@ class FrontProductController extends Controller
         if (User::where('phone',$request->phone)->exists()){
             return redirect()->to($previous.'#get_back')->withInput()->with('phone_exists', 'Phone already exists');
         }
-        $userData = Arr::except($request->all(),array('first_name','last_name','confirm_password','postal_code','city','payment'));
-        $userData['password'] = Hash::make($request->password);
-        $userData['name'] = $request->first_name.' '.$request->last_name;
-        $user = User::create($userData);
-
-        $customerData = Arr::except($request->all(),array('confirm_password','password','email','phone','payment'));
-        $customerData['user_id'] = $user->id;
-        $customer = new Customers();
-        $newCustomer = Customers::create($customerData);
-        $order = new Orders();
-        $order->customer_id = $newCustomer->id;
-        $order->total_price = AddToCart::where('user_ip',$request->ip())->sum('total_price');
-        $order->sub_total = $order->total_price;
-        $order->payment_type = $request->payment;
-        $order->save();
-
-
-        $addToCart = AddToCart::has('product')->where('user_ip',$request->ip())->get();
-        foreach($addToCart as $card)
-        {
-            $order_item = new OrderItems();
-            $order_item->order_id = $order->id;
-            $order_item->product_id = $card->product_id;
-            $order_item->product_name = $card->product->name;
-            $order_item->unit_price = $card->product->price;
-            $order_item->quantity = $card->quantity;
-            $order_item->unit_total = $card->total_price;
-            $order_item->save();
-            $card->delete();
-        }
+//        $userData = Arr::except($request->all(),array('first_name','last_name','confirm_password','postal_code','city','payment'));
+//        $userData['password'] = Hash::make($request->password);
+//        $userData['name'] = $request->first_name.' '.$request->last_name;
+//        $user = User::create($userData);
+//
+//        $customerData = Arr::except($request->all(),array('confirm_password','password','email','phone','payment'));
+//        $customerData['user_id'] = $user->id;
+//        $customer = new Customers();
+//        $newCustomer = Customers::create($customerData);
+//        $order = new Orders();
+//        $order->customer_id = $newCustomer->id;
+//        $order->total_price = AddToCart::where('user_ip',$request->ip())->sum('total_price');
+//        $order->sub_total = $order->total_price;
+//        $order->payment_type = $request->payment;
+//        $order->save();
+//
+//
+//        $addToCart = AddToCart::has('product')->where('user_ip',$request->ip())->get();
+//        foreach($addToCart as $card)
+//        {
+//            $order_item = new OrderItems();
+//            $order_item->order_id = $order->id;
+//            $order_item->product_id = $card->product_id;
+//            $order_item->product_name = $card->product->name;
+//            $order_item->unit_price = $card->product->price;
+//            $order_item->quantity = $card->quantity;
+//            $order_item->unit_total = $card->total_price;
+//            $order_item->save();
+//            $card->delete();
+//        }
         if ($request->payment === 'cod')
         {
-            return redirect(route('orderSuccess',['data'=>$data ,'id'=>$order->id]));
+//            return redirect(route('orderSuccess',['data'=>$data ,'id'=>$order->id]));
 
         } else if ($request->payment === 'paypal')
         {
-            return redirect(route('payWithPaypal',['order_id'=>$order->id]));
+//            return redirect(route('payWithPaypal',['order_id'=>$order->id]));
 
         }
+        else if($request->payment === 'bkash')
+        {
+            $tokenResponse = $this->getToken();
+            $id_token = $tokenResponse['id_token'] ?? null;
+            if (!$id_token) return 'Token failed';
 
+
+            // Payment Create
+            $response = Http::withHeaders([
+                'Authorization' => 'Bearer ' . $id_token,
+                'X-APP-Key' => $this->app_key,
+            ])->post($this->base_url . '/tokenized/checkout/create', [
+                'amount' => '10',
+                'currency' => 'BDT',
+                'intent' => 'sale',
+                'merchantInvoiceNumber' => 'INV-001',
+                'callbackURL' => route('bkash.callback'),
+            ]);
+
+            $payment = $response->json();
+
+            // 1️⃣ Response থেকে redirect user to bKash checkout
+            if(isset($payment['bkashURL'])){
+                return redirect($payment['bkashURL']);
+            }
+        }
+
+    }
+    public function callback()
+    {
+       dd('payment done');
     }
     public function placeOrderByLogin(Request $request)
     {
